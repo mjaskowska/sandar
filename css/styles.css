@@ -53,7 +53,7 @@ header nav .nav-list {
   margin: 10px auto;
 }
 
-header nav .nav-list .kontakt {
+header nav .nav-list .nav-kontakt {
   color: #e07b22;
   font-weight: bold;
 }
@@ -76,6 +76,17 @@ header nav .nav-list li:hover {
 header nav .nav-list li a {
   text-decoration: none;
   color: inherit;
+}
+
+header nav .nav-list li button {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+header nav .nav-list li button:hover {
+  color: white;
 }
 
 main {
@@ -118,6 +129,7 @@ main .o-nas {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 150px;
 }
 
 main .o-nas .title {
@@ -137,12 +149,6 @@ main .o-nas .mid-title {
 
 main .o-nas p {
   padding-top: 20px;
-}
-
-main .o-nas .energia-img {
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
 }
 
 main .o-nas .energia-img img {
@@ -206,7 +212,7 @@ main .o-nas .marki-items .item img {
   padding: 2px;
 }
 
-main button {
+main .o-nas button {
   padding: 7px 25px;
   margin: 5px 0px;
   font-size: 0.7rem;
@@ -219,6 +225,31 @@ main button {
   cursor: pointer;
   display: block;
   margin: 25px auto 70px auto;
+}
+
+main .kontakt-section {
+  display: block;
+  width: 100vw;
+  margin: 0 auto;
+  background: #e07b22;
+  padding: 50px;
+}
+
+main .kontakt-section .kontakt-info {
+  display: block;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto 30px auto;
+}
+
+main .kontakt-section #skontaktuj-sie {
+  border-bottom: 1px solid white;
+  width: 50%;
+  text-align: center;
+  display: block;
+  margin: 15px auto;
+  padding-bottom: 10px;
+  color: white;
 }
 
 @media only screen and (min-width: 576px) {

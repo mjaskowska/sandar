@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SANDAR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap"
@@ -26,12 +28,10 @@
                 <li><a href="#">REKUPERACJA</a></li>
                 <li><a href="#">OGRZEWANIE PODŁOGOWE</a></li>
                 <li><a href="#">GALERIA</a></li>
-                <li class="kontakt"><a href="#">KONTAKT</a></li>
+                <li><button class="nav-kontakt" onclick="toggleKontakt()">KONTAKT</button></li>
 
             </ul>
-            <!-- <div class="btn">
-                <button class="kontakt-btn">SKONTAKTUJ SIĘ Z NAMI</button>
-            </div> -->
+
         </nav>
     </header>
 
@@ -41,6 +41,30 @@
                 <img id="nibe" src="./img/nibe banner.jpg" alt="banner promocyjny NIBE" />
             </div>
         </a>
+
+        <div class="kontakt-section">
+            <p id="skontaktuj-sie">SKONTAKTUJ SIĘ Z NAMI!</p>
+            <div class="kontakt-info">
+                <div class="kontakt-container2">
+                    <p>Dariusz Jaśkowski</p>
+                    <div class="infos">
+                        <i class="fa fa-envelope"></i>
+                        <p>dariuszjaskowski@wp.pl</p>
+                        <i class="fa fa-phone"></i>
+                        <p>607-940-532</p>
+                    </div>
+                </div>
+                <div class="kontakt-container1">
+                    <i class="fa fa-home"></i>
+                    <div class="adres">
+                        <p>Kostomłoty Drugie ul.Starowiejska 80</p>
+                        <p>26-085 Miedziana Góra</p>
+                        <p>woj. świętokrzyskie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="o-nas">
             <article>
                 <div class="energia-img">
@@ -76,18 +100,12 @@
                 <p>Osiągamy to poprzez ciągłe podnoszenie kwalifikacji zawodowych personelu oraz poziomu technicznego
                     montażu. </p>
                 <p>Oferujemy serwis gwarancyjny oraz pogwarancyjny wykonanych przez nas instalacji.</p>
-                <!-- <h3 class="mid-title">Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, omnis.</p> -->
-            </article>
-            <button class="kontakt-btn">SKONTAKTUJ SIĘ Z NAMI</button>
-        </div>
-        
 
+            </article>
+            <!-- <button class="kontakt-btn">SKONTAKTUJ SIĘ Z NAMI</button> -->
+        </div>
     </main>
 
-    <footer>
-
-    </footer>
     <script src="./main.js" async defer></script>
 </body>
 

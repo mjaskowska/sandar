@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+header nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #a09e9e;
+  -webkit-box-shadow: 0px 0px 0.8rem #c4bfbf;
+          box-shadow: 0px 0px 0.8rem #c4bfbf;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0 10px;
+}
+
+header nav .logo {
+  margin: 5px;
+}
+
+header nav .logo img {
+  width: 70px;
+}
+
+header nav .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px auto;
+}
+
+header nav .nav-list .kontakt {
+  color: #e07b22;
+  font-weight: bold;
+}
+
+header nav .nav-list li {
+  list-style: none;
+  padding: 0px 10px;
+  font-size: 0.9rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header nav .nav-list li:hover {
+  font-weight: bold;
+  background-color: #e07b22;
+  border-radius: 7px;
+  color: white;
+}
+
+header nav .nav-list li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  width: 100%;
+  overflow: hidden;
+}
+
+main .nibe-banner {
+  width: 100%;
+  height: auto;
+  background: -webkit-gradient(linear, left top, right top, from(#dad8d9), color-stop(50%, transparent)), -webkit-gradient(linear, left top, left bottom, from(#cd7c11), color-stop(50%, transparent));
+  background: linear-gradient(90deg, #dad8d9 0% 50%, transparent 50% 100%), linear-gradient(#cd7c11 0% 50%, transparent 50% 100%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+main .nibe-banner img {
+  max-width: 100vw;
+  max-height: 35vh;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+main .o-nas {
+  max-width: 95vw;
+  margin: 5px auto 5px auto;
+  font-size: 0.85rem;
+  position: relative;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .o-nas .title {
+  font-size: 1.1rem;
+  color: #e07b22;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 15px auto;
+}
+
+main .o-nas .mid-title {
+  color: #e07b22;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 10px 10px;
+}
+
+main .o-nas .marki-items, main .o-nas .zakres-items {
+  margin: 10px auto 25px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(1fr, 1fr))[autofit];
+      grid-template-columns: repeat(autofit, minmax(1fr, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: relative;
+}
+
+main .o-nas .marki-items .item, main .o-nas .zakres-items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #e07b22;
+  padding: 5px 20px;
+  margin-top: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+main button {
+  padding: 7px 25px;
+  margin: 5px 0px;
+  font-size: 0.7rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 2em #949393;
+          box-shadow: 0px 0px 2em #949393;
+  border: none;
+  background-color: #e07b22;
+  color: white;
+  cursor: pointer;
+  display: block;
+  margin: 25px auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .marki-items, .zakres-items {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .marki-items, .zakres-items {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    grid-gap: 7px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .marki-items, .zakres-items {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    grid-gap: 7px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  article {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+  .marki-items, .zakres-items {
+    -ms-grid-columns: (1fr)[7];
+        grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

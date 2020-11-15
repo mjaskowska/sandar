@@ -139,6 +139,20 @@ main .o-nas p {
   padding-top: 20px;
 }
 
+main .o-nas .energia-img {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main .o-nas .energia-img img {
+  max-height: 20vh;
+  max-width: 100%;
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+}
+
 main .o-nas .marki-items, main .o-nas .zakres-items {
   margin: 10px auto 25px auto;
   display: -ms-grid;

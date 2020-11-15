@@ -158,6 +158,18 @@ main {
         p {
             padding-top: 20px;
         }
+        .energia-img {
+            justify-content: right;
+            
+           
+            img{
+            max-height: 20vh;
+            max-width: 100%;
+            display: block;
+            margin-right: 0;
+            margin-left: auto;
+            }
+        }
         
         
         .marki-items, .zakres-items{

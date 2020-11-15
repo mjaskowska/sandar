@@ -121,7 +121,7 @@ main .o-nas {
 }
 
 main .o-nas .title {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #e07b22;
   text-transform: uppercase;
   text-align: center;
@@ -133,6 +133,10 @@ main .o-nas .mid-title {
   font-size: 1rem;
   font-style: italic;
   margin: 10px 10px;
+}
+
+main .o-nas p {
+  padding-top: 20px;
 }
 
 main .o-nas .marki-items, main .o-nas .zakres-items {
@@ -154,7 +158,7 @@ main .o-nas .marki-items .item, main .o-nas .zakres-items .item {
   display: -ms-flexbox;
   display: flex;
   border: 1px solid #e07b22;
-  padding: 5px 20px;
+  padding: 5px 10px;
   margin-top: 5px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -164,6 +168,28 @@ main .o-nas .marki-items .item, main .o-nas .zakres-items .item {
           align-items: center;
   text-align: center;
   font-size: 0.7rem;
+}
+
+main .o-nas .marki-items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #e07b22;
+  padding: 5px 10px;
+  margin-top: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+main .o-nas .marki-items .item img {
+  height: 30px;
+  padding: 2px;
 }
 
 main button {
@@ -178,7 +204,7 @@ main button {
   color: white;
   cursor: pointer;
   display: block;
-  margin: 25px auto;
+  margin: 25px auto 70px auto;
 }
 
 @media only screen and (min-width: 576px) {

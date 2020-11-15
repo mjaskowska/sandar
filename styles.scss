@@ -29,7 +29,7 @@ body {
     cursor: pointer;
 }
 @mixin title {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
             color: $orange;
             text-transform: uppercase;
             text-align: center;
@@ -40,6 +40,16 @@ body {
             font-size: 1rem;
             font-style: italic;
             margin: 10px 10px;
+}
+@mixin item {
+    display: flex;
+    border: 1px solid $orange;
+    padding: 5px 10px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.7rem;
 }
 
 // header 
@@ -145,6 +155,9 @@ main {
             @include mid-title();
             
         }
+        p {
+            padding-top: 20px;
+        }
         
         
         .marki-items, .zakres-items{
@@ -156,24 +169,25 @@ main {
                 position: relative;
                 
             .item {
-                display: flex;
-                    border: 1px solid $orange;
-                    padding: 5px 20px;
-                    margin-top: 5px;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                    font-size: 0.7rem;
+                @include item();
                 }
-            
-        
+        }
+        .marki-items {
+            .item {
+                @include item();
+                
+                img {
+                    height: 30px;
+                    padding: 2px;
+                }
+            }
         }
 
     }
     button {
          @include kontakt-btn();
          display: block;
-         margin: 25px auto;
+         margin: 25px auto 70px auto;
             
     }
  }

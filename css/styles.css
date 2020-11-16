@@ -53,7 +53,7 @@ header nav .nav-list {
   margin: 10px auto;
 }
 
-header nav .nav-list .nav-kontakt {
+header nav .nav-list .nav-contact {
   color: #e07b22;
   font-weight: bold;
 }
@@ -92,13 +92,14 @@ header nav .nav-list li button:hover {
 main {
   width: 100%;
   overflow: hidden;
+  background: #faf8f8;
 }
 
 main .nibe-banner {
   width: 100%;
   height: auto;
-  background: -webkit-gradient(linear, left top, right top, from(#dad8d9), color-stop(50%, transparent)), -webkit-gradient(linear, left top, left bottom, from(#cd7c11), color-stop(50%, transparent));
-  background: linear-gradient(90deg, #dad8d9 0% 50%, transparent 50% 100%), linear-gradient(#cd7c11 0% 50%, transparent 50% 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#dad8d9), color-stop(50%, transparent)), -webkit-gradient(linear, left top, left bottom, from(#cd7c11), color-stop(50%, white));
+  background: linear-gradient(90deg, #dad8d9 0% 50%, transparent 50% 100%), linear-gradient(#cd7c11 0% 50%, white 50% 100%);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -159,7 +160,7 @@ main .o-nas .energia-img img {
   margin-left: auto;
 }
 
-main .o-nas .marki-items, main .o-nas .zakres-items {
+main .o-nas .range-items {
   margin: 10px auto 25px auto;
   display: -ms-grid;
   display: grid;
@@ -173,11 +174,10 @@ main .o-nas .marki-items, main .o-nas .zakres-items {
   position: relative;
 }
 
-main .o-nas .marki-items .item, main .o-nas .zakres-items .item {
+main .o-nas .range-items .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #e07b22;
   padding: 5px 10px;
   margin-top: 5px;
   -webkit-box-pack: center;
@@ -188,13 +188,30 @@ main .o-nas .marki-items .item, main .o-nas .zakres-items .item {
           align-items: center;
   text-align: center;
   font-size: 0.7rem;
+  background: white;
+  -webkit-box-shadow: 0 0 1em lightgrey;
+          box-shadow: 0 0 1em lightgrey;
+  border: 1px solid #e07b22;
 }
 
-main .o-nas .marki-items .item {
+main .o-nas .brands-items {
+  margin: 10px auto 25px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(1fr, 1fr))[autofit];
+      grid-template-columns: repeat(autofit, minmax(1fr, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: relative;
+}
+
+main .o-nas .brands-items .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #e07b22;
   padding: 5px 10px;
   margin-top: 5px;
   -webkit-box-pack: center;
@@ -205,9 +222,12 @@ main .o-nas .marki-items .item {
           align-items: center;
   text-align: center;
   font-size: 0.7rem;
+  background: white;
+  -webkit-box-shadow: 0 0 1em lightgrey;
+          box-shadow: 0 0 1em lightgrey;
 }
 
-main .o-nas .marki-items .item img {
+main .o-nas .brands-items .item img {
   height: 30px;
   padding: 2px;
 }
@@ -227,61 +247,221 @@ main .o-nas button {
   margin: 25px auto 70px auto;
 }
 
-main .kontakt-section {
-  display: block;
+main .contact-section {
+  display: none;
   width: 100vw;
   margin: 0 auto;
   background: #e07b22;
-  padding: 50px;
+  padding: 20px;
 }
 
-main .kontakt-section .kontakt-info {
+main .contact-section .contact-info {
   display: block;
   width: 80%;
   text-align: center;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 20px auto;
 }
 
-main .kontakt-section #skontaktuj-sie {
+main .contact-section #contact-us {
   border-bottom: 1px solid white;
   width: 50%;
   text-align: center;
   display: block;
-  margin: 15px auto;
+  margin: 5px auto;
   padding-bottom: 10px;
   color: white;
 }
 
-@media only screen and (min-width: 576px) {
-  .marki-items, .zakres-items {
+main .pompy {
+  max-width: 95vw;
+  margin: 5px auto 5px auto;
+  font-size: 0.85rem;
+  position: relative;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 150px;
+}
+
+main .pompy h2 {
+  font-size: 1.5rem;
+  color: #e07b22;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 15px auto;
+}
+
+main .pompy h3 {
+  color: #e07b22;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 10px 10px;
+  text-align: center;
+}
+
+main .pompy .item-container {
+  margin: 10px auto 25px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(1fr, 1fr))[autofit];
+      grid-template-columns: repeat(autofit, minmax(1fr, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: relative;
+  width: 95%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+main .pompy .item-container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 10px;
+  margin-top: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+  background: white;
+  border: 1px solid #e07b22;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-content: center;
+}
+
+main .pompy .item-container .item li {
+  list-style: none;
+}
+
+main .pompy .item-container .item .sup {
+  position: relative;
+  bottom: 1ex;
+  font-size: 80%;
+}
+
+main .pompy .polaroid-container {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+}
+
+main .pompy .polaroid-container .polaroid {
+  background: white;
+  -webkit-box-shadow: 0 0 1rem lightgray;
+          box-shadow: 0 0 1rem lightgray;
+  padding-bottom: 25px;
+}
+
+main .pompy .polaroid-container .polaroid h4 {
+  color: #e07b22;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 10px 10px;
+  font-size: 98%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+main .pompy .polaroid-container .polaroid p {
+  width: 95%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 0.8rem;
+}
+
+main .pompy .polaroid-container .polaroid img {
+  max-width: 100%;
+}
+
+main .pompy .polaroid-container .polaroid li {
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+
+main .pompy .polaroid-container .polaroid iframe {
+  margin: 15px 0;
+}
+
+#polaroid1 {
+  grid-area: polaroid1;
+}
+
+#polaroid2 {
+  grid-area: polaroid2;
+}
+
+#polaroid3 {
+  grid-area: polaroid3;
+}
+
+#polaroid4 {
+  grid-area: polaroid4;
+}
+
+#polaroid5 {
+  grid-area: polaroid5;
+}
+
+#polaroid6 {
+  grid-area: polaroid6;
+}
+
+#polaroid7 {
+  grid-area: polaroid7;
+}
+
+#polaroid8 {
+  grid-area: polaroid1;
+}
+
+@media screen and (min-width: 576px) {
+  .brands-items, .range-items {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
   }
+  .item-container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-@media only screen and (min-width: 768px) {
-  .marki-items, .zakres-items {
+@media screen and (min-width: 768px) {
+  .brands-items, .range-items {
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
     grid-gap: 7px;
   }
 }
 
-@media only screen and (min-width: 850px) {
-  .marki-items, .zakres-items {
-    -ms-grid-columns: (1fr)[6];
-        grid-template-columns: repeat(6, 1fr);
+@media screen and (min-width: 850px) {
+  .brands-items, .range-items {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
     grid-gap: 7px;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
   article {
     max-width: 70vw;
     margin: 0 auto;
   }
-  .marki-items, .zakres-items {
+  .brands-items, .range-items {
     -ms-grid-columns: (1fr)[7];
         grid-template-columns: repeat(7, 1fr);
     grid-gap: 5px;

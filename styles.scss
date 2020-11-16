@@ -14,10 +14,11 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     
+    
 }
 // mixins
 
-@mixin kontakt-btn {
+@mixin contact-btn {
     padding: 7px 25px;
     margin: 5px 0px;
     font-size: 0.7rem;
@@ -43,13 +44,22 @@ body {
 }
 @mixin item {
     display: flex;
-    border: 1px solid $orange;
+    // border: 1px solid $orange;
     padding: 5px 10px;
     margin-top: 5px;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 0.7rem;
+    background: white;
+}
+@mixin item-container {
+    margin: 10px auto 25px auto;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(1fr, 1fr));
+    justify-content: center;
+    align-content: center;
+    position: relative;
 }
 @mixin article {
     max-width: 95vw;
@@ -88,7 +98,7 @@ header {
             flex-wrap: wrap;
             margin: 10px auto;
 
-            .nav-kontakt{
+            .nav-contact{
                 color: $orange;
                 font-weight: bold;
             }
@@ -130,12 +140,13 @@ header {
 main {
     width: 100%;
     overflow: hidden;
+    background: rgb(250, 248, 248);
 
     .nibe-banner {
         width: 100%;
         height: auto;
         background: linear-gradient(90deg, #dad8d9 0% 50%, transparent 50% 100%),
-                    linear-gradient(#cd7c11 0% 50%, transparent 50% 100%);
+                    linear-gradient(#cd7c11 0% 50%, white 50% 100%);
         
         justify-content: center;
         margin: 0 auto;
@@ -155,6 +166,7 @@ main {
     .o-nas{        
         @include article();
         margin-bottom: 150px;
+        // display: none;
        
         .title {
             @include title();
@@ -177,21 +189,20 @@ main {
             }
         }
 
-        .marki-items, .zakres-items{
-                margin: 10px auto 25px auto;
-                display: grid;
-                grid-template-columns: repeat(autofit, minmax(1fr, 1fr));
-                justify-content: center;
-                align-content: center;
-                position: relative;
+        .range-items{
+            @include item-container();
                 
             .item {
                 @include item();
+                box-shadow: 0 0 1em lightgrey;
+                border: 1px solid $orange;
             }
         }
-        .marki-items {
-            .item {
+        .brands-items {
+           @include item-container();
+           .item {
                 @include item();
+                box-shadow: 0 0 1em lightgrey;
                 
                 img {
                     height: 30px;
@@ -201,67 +212,170 @@ main {
         }
     
     button {
-         @include kontakt-btn();
+         @include contact-btn();
          display: block;
          margin: 25px auto 70px auto;
         }
     }
 
-    .kontakt-section {
-        display: block;
+    .contact-section {
+        display: none;
         width: 100vw;
         margin: 0 auto;
         background: $orange;
-        padding: 50px;
+        padding: 20px;
         
-        .kontakt-info {
+        .contact-info {
             display: block;
             width: 80%;
             text-align: center;
-            margin: 0 auto 30px auto;   
+            margin: 0 auto 20px auto;   
         }
 
-        #skontaktuj-sie{
+        #contact-us{
             border-bottom: 1px solid white;
             width: 50%;
             text-align: center;
             display: block;
-            margin: 15px auto;
+            margin: 5px auto;
             padding-bottom: 10px;
             color: white;
         }
     }     
+
+    .pompy {
+    @include article();
+    margin-bottom: 150px;
+    h2 {
+        @include title();
+        
+    }
+    h3{
+        @include mid-title();
+        text-align: center;
+    }
+    
+    .item-container {
+        @include item-container();
+        width: 95%;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:5px;
+                
+        .item{
+            @include item();
+            border: 1px solid $orange;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+                        
+            li {
+                list-style: none;
+            }
+            
+            .sup{
+                position: relative;
+                bottom: 1ex;
+                font-size: 80%;
+            }
+        }
+    }
+    .polaroid-container {
+        display: block;
+        width: 95%;
+        margin: 0 auto;
+        .polaroid {
+            background: white;
+            box-shadow: 0 0 1rem lightgray;
+            padding-bottom: 25px;
+            h4 {
+                @include mid-title();
+                font-size: 98%;
+                text-align: center;
+                padding-top: 10px;
+            }
+            p {
+                width: 95%;
+                margin: 0 auto;  
+                text-align: justify;
+                font-size: 0.8rem;
+            }
+            img {
+                max-width: 100%;
+            }
+            li {
+                width: 90%;
+                margin: 0 auto;
+                padding-left: 10px;
+            }
+            iframe {
+                margin: 15px 0;
+            }
+        }
+        
+    }
+}
  }
+// grid areas names
+#polaroid1 {
+    grid-area: polaroid1;
+}
+#polaroid2 {
+    grid-area: polaroid2;
+}
+#polaroid3 {
+    grid-area: polaroid3;
+}
+#polaroid4 {
+    grid-area: polaroid4;
+}
+#polaroid5 {
+    grid-area: polaroid5;
+}
+#polaroid6 {
+    grid-area: polaroid6;
+}
+#polaroid7 {
+    grid-area: polaroid7;
+}
+#polaroid8 {
+    grid-area: polaroid1;
+}
 
+ @media screen and (min-width: 576px){
 
- @media only screen and (min-width: 576px){
-
-    .marki-items, .zakres-items{
+    .brands-items, .range-items{
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 5px;
     }
+    
+    .item-container{
+           grid-template-columns: repeat(4, 1fr);
+           
+        }
+    
  }
 
- @media only screen and (min-width: 768px){
-    .marki-items, .zakres-items{
+ @media screen and (min-width: 768px){
+    .brands-items, .range-items{
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 7px;
+    }
+    
+ }
+
+ @media screen and (min-width: 850px){
+    .brands-items, .range-items{
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 7px;
     }
  }
-
- @media only screen and (min-width: 850px){
-    .marki-items, .zakres-items{
-        grid-template-columns: repeat(6, 1fr);
-        grid-gap: 7px;
-    }
- }
  
- @media only screen and (min-width: 992px) {
+ @media screen and (min-width: 992px) {
     article {
         max-width: 70vw;
         margin: 0 auto;
     }
-    .marki-items, .zakres-items {
+    .brands-items, .range-items {
         grid-template-columns: repeat(7, 1fr);
         grid-gap: 5px;
     }

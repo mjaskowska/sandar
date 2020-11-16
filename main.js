@@ -1,10 +1,10 @@
-const kontaktSection = document.querySelector('.kontakt-section');
+const contactSection = document.querySelector('.contact-section');
 
-function toggleKontakt(){
-    if (kontaktSection.style.display==="none"){
-        kontaktSection.style.display="block";
+function toggleContact(){
+    if (contactSection.style.display==="none"){
+        contactSection.style.display="block";
     }
     else {
-        kontaktSection.style.display="none";
+        contactSection.style.display="none";
     }
 }

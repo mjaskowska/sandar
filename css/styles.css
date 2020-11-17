@@ -615,6 +615,108 @@ main .rekuperacja .polaroid-container .polaroid .item-container .item1 li {
   margin-left: 0;
 }
 
+main .ogrzewanie {
+  max-width: 95vw;
+  margin: 5px auto 5px auto;
+  font-size: 0.85rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .ogrzewanie h2 {
+  font-size: 1.5rem;
+  color: #e07b22;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 15px auto;
+}
+
+main .ogrzewanie .polaroid-container .polaroid {
+  background: white;
+  -webkit-box-shadow: 0 0 1rem lightgray;
+          box-shadow: 0 0 1rem lightgray;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+main .ogrzewanie .polaroid-container .polaroid h4 {
+  color: #e07b22;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 10px 10px;
+  font-size: 98%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+main .ogrzewanie .polaroid-container .polaroid p {
+  width: 95%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 0.8rem;
+}
+
+main .ogrzewanie .polaroid-container .polaroid img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+main .ogrzewanie .polaroid-container .polaroid ul li {
+  list-style: none;
+}
+
+main .ogrzewanie .polaroid-container .polaroid li {
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+
+main .ogrzewanie .polaroid-container .polaroid iframe {
+  margin: 15px auto;
+  width: 300px;
+  max-width: 100%;
+  display: block;
+}
+
+main .ogrzewanie .polaroid-container .polaroid img {
+  margin-top: 10px;
+  width: 70%;
+  max-width: 300px;
+}
+
+main .ogrzewanie .polaroid-container .polaroid .item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .ogrzewanie .polaroid-container .polaroid .item-container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 10px;
+  margin-top: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+  background: white;
+  max-width: 150px;
+  border: 1px solid #e07b22;
+  margin: 7px;
+}
+
 @media screen and (min-width: 576px) {
   .brands-items, .range-items {
     -ms-grid-columns: (1fr)[4];

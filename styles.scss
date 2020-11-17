@@ -376,9 +376,6 @@ main {
                     flex-wrap: wrap;
                     justify-content: center;
                     
-
-                                  
-
                     .item {
                         @include item();
                         max-width: 150px;
@@ -405,7 +402,37 @@ main {
          }
 
     }
+    .ogrzewanie {
+        @include article();
+        h2 {
+            @include title();
+        }
+        .polaroid-container{
+            
+            .polaroid{
+                @include polaroid();
+                img{
+                    margin-top: 10px;
+                    width: 70%;
+                    max-width: 300px;
+                }
+
+                .item-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    
+                    .item {
+                        @include item();
+                        max-width: 150px;
+                        border: 1px solid $orange;
+                        margin: 7px;
+                    }
+                }
+        }
+    }
  }
+}
 // grid areas names
 // #polaroid1 {
 //     grid-area: polaroid1;

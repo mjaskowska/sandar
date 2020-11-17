@@ -161,18 +161,26 @@ header {
                     color: inherit;
                 }
 
-                button {
-                    text-decoration: none;
-                    background-color: transparent;
-                    border: none;
-                    outline: none;
-
-                    &:hover {
-                        color: white;
-                    }
-                }
+                
             }
+           
         } 
+        button {
+            text-decoration: none;
+            background-color: white;
+            border: none;
+            outline: none;
+            padding: 5px 15px;
+            margin: auto 30px 15px auto;
+            color: $orange;
+            font-weight: bold;
+
+            &:hover {
+                color: white;
+                background-color: $orange;
+                border-radius: 5px;
+            }
+        }
     }
 }
 

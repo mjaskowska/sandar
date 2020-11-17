@@ -83,15 +83,21 @@ header nav .nav-list li a {
   color: inherit;
 }
 
-header nav .nav-list li button {
+header nav button {
   text-decoration: none;
-  background-color: transparent;
+  background-color: white;
   border: none;
   outline: none;
+  padding: 5px 15px;
+  margin: auto 30px 15px auto;
+  color: #e07b22;
+  font-weight: bold;
 }
 
-header nav .nav-list li button:hover {
+header nav button:hover {
   color: white;
+  background-color: #e07b22;
+  border-radius: 5px;
 }
 
 main {

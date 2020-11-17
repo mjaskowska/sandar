@@ -13,6 +13,7 @@ body {
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    background: rgb(250, 248, 248);
     
     
 }
@@ -65,12 +66,53 @@ body {
     max-width: 95vw;
     margin: 5px auto 5px auto;
     font-size: 0.85rem;
-     justify-content: center;
+    justify-content: center;
+}
+@mixin polaroid {
+    background: white;
+            box-shadow: 0 0 1rem lightgray;
+            padding-bottom: 25px;
+            text-align: center;
+            
+            h4 {
+                @include mid-title();
+                font-size: 98%;
+                text-align: center;
+                padding-top: 10px;
+            }
+            p {
+                width: 95%;
+                margin: 0 auto;  
+                text-align: justify;
+                font-size: 0.8rem;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+            ul {
+                li{
+                    list-style: none;
+                }
+            }
+            li {
+                width: 90%;
+                margin: 0 auto;
+                padding-left: 10px;
+            }
+            iframe {
+                margin: 15px auto;
+                width: 300px;
+                max-width: 100%;
+                display: block;
+            }
 }
 
 // header 
 
 header {
+    background-color: white;
     nav {
         width: 100%;
         display: flex;
@@ -138,7 +180,7 @@ header {
 main {
     width: 100%;
     overflow: hidden;
-    background: rgb(250, 248, 248);
+    
 
     .nibe-banner {
         width: 100%;
@@ -243,7 +285,8 @@ main {
 
     .pompy {
     @include article();    
-    margin-bottom: 150px;
+    margin-bottom: 100px;
+    display: none;
     h2 {
         @include title();
         
@@ -281,76 +324,113 @@ main {
     .polaroid-container {
         
         .polaroid {
-            background: white;
-            box-shadow: 0 0 1rem lightgray;
-            padding-bottom: 25px;
-            text-align: center;
-            
-            h4 {
-                @include mid-title();
-                font-size: 98%;
-                text-align: center;
-                padding-top: 10px;
-            }
-            p {
-                width: 95%;
-                margin: 0 auto;  
-                text-align: justify;
-                font-size: 0.8rem;
+            @include polaroid();
+        } 
+    }
+    }
+
+.kolektory {
+    @include article();
+    margin-bottom: 100px;
+    display: none;
+    h2 {
+        @include title();
+    }
+    h3 {
+        @include mid-title();
+    }
+    .polaroid-container{
+        
+        .polaroid{
+            @include polaroid();
+            p{
+                padding-top: 15px;
             }
             img {
-                display: block;
-                margin: 0 auto;
-                max-width: 100%;
+                width: 65%;
             }
-            ul {
-                li{
-                    list-style: none;
-                }
-            }
-            li {
-                width: 90%;
-                margin: 0 auto;
-                padding-left: 10px;
-            }
-            iframe {
-                margin: 15px auto;
-                width: 300px;
-                max-width: 100%;
-                display: block;
-            }
-
+            
         }
-        
-        
     }
 }
+    .rekuperacja {
+        display: none;
+         @include article();
+         h2 {
+             @include title();
+         }
+         h3 {
+             @include mid-title();
+             text-align: center;
+         }
+
+         .polaroid-container{
+
+             .polaroid{
+                 @include polaroid();
+                 p{
+                 padding-top: 10px; }
+
+                .item-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    
+
+                                  
+
+                    .item {
+                        @include item();
+                        max-width: 150px;
+                        border: 1px solid $orange;
+                        margin: 7px;
+                    }
+                    .item1 {
+                        border: 1px solid $orange;
+                        max-width: 170px;
+                        margin-bottom: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        font-size: 0.75rem;
+                        li {
+                            margin-top: 10px;
+                            margin-left: 0;
+                        }
+                    }
+
+                }
+
+             }
+         }
+
+    }
  }
 // grid areas names
-#polaroid1 {
-    grid-area: polaroid1;
-}
-#polaroid2 {
-    grid-area: polaroid2;
-}
-#polaroid3 {
-    grid-area: polaroid3;
-}
-#polaroid4 {
-    grid-area: polaroid4;
-}
-#polaroid5 {
-    grid-area: polaroid5;
-}
-#polaroid6 {
-    grid-area: polaroid6;
-}
-#polaroid7 {
-    grid-area: polaroid7;
-}
-#polaroid8 {
-    grid-area: polaroid1;
-}
+// #polaroid1 {
+//     grid-area: polaroid1;
+// }
+// #polaroid2 {
+//     grid-area: polaroid2;
+// }
+// #polaroid3 {
+//     grid-area: polaroid3;
+// }
+// #polaroid4 {
+//     grid-area: polaroid4;
+// }
+// #polaroid5 {
+//     grid-area: polaroid5;
+// }
+// #polaroid6 {
+//     grid-area: polaroid6;
+// }
+// #polaroid7 {
+//     grid-area: polaroid7;
+// }
+// #polaroid8 {
+//     grid-area: polaroid1;
+// }
 
  @media screen and (min-width: 576px){
 
@@ -361,7 +441,9 @@ main {
     
     .item-container{
            grid-template-columns: repeat(4, 1fr);
+           
         }
+    
     
  }
 
@@ -406,4 +488,5 @@ main {
         grid-template-columns: repeat(7, 1fr);
         grid-gap: 5px;
     }
+    
 }

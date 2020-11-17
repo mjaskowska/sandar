@@ -10,6 +10,11 @@ body {
   height: 100vh;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  background: #faf8f8;
+}
+
+header {
+  background-color: white;
 }
 
 header nav {
@@ -92,7 +97,6 @@ header nav .nav-list li button:hover {
 main {
   width: 100%;
   overflow: hidden;
-  background: #faf8f8;
 }
 
 main .nibe-banner {
@@ -278,7 +282,8 @@ main .pompy {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
+  display: none;
 }
 
 main .pompy h2 {
@@ -397,36 +402,217 @@ main .pompy .polaroid-container .polaroid iframe {
   display: block;
 }
 
-#polaroid1 {
-  grid-area: polaroid1;
+main .kolektory {
+  max-width: 95vw;
+  margin: 5px auto 5px auto;
+  font-size: 0.85rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 100px;
+  display: none;
 }
 
-#polaroid2 {
-  grid-area: polaroid2;
+main .kolektory h2 {
+  font-size: 1.5rem;
+  color: #e07b22;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 15px auto;
 }
 
-#polaroid3 {
-  grid-area: polaroid3;
+main .kolektory h3 {
+  color: #e07b22;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 10px 10px;
 }
 
-#polaroid4 {
-  grid-area: polaroid4;
+main .kolektory .polaroid-container .polaroid {
+  background: white;
+  -webkit-box-shadow: 0 0 1rem lightgray;
+          box-shadow: 0 0 1rem lightgray;
+  padding-bottom: 25px;
+  text-align: center;
 }
 
-#polaroid5 {
-  grid-area: polaroid5;
+main .kolektory .polaroid-container .polaroid h4 {
+  color: #e07b22;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 10px 10px;
+  font-size: 98%;
+  text-align: center;
+  padding-top: 10px;
 }
 
-#polaroid6 {
-  grid-area: polaroid6;
+main .kolektory .polaroid-container .polaroid p {
+  width: 95%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 0.8rem;
 }
 
-#polaroid7 {
-  grid-area: polaroid7;
+main .kolektory .polaroid-container .polaroid img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
-#polaroid8 {
-  grid-area: polaroid1;
+main .kolektory .polaroid-container .polaroid ul li {
+  list-style: none;
+}
+
+main .kolektory .polaroid-container .polaroid li {
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+
+main .kolektory .polaroid-container .polaroid iframe {
+  margin: 15px auto;
+  width: 300px;
+  max-width: 100%;
+  display: block;
+}
+
+main .kolektory .polaroid-container .polaroid p {
+  padding-top: 15px;
+}
+
+main .kolektory .polaroid-container .polaroid img {
+  width: 65%;
+}
+
+main .rekuperacja {
+  display: none;
+  max-width: 95vw;
+  margin: 5px auto 5px auto;
+  font-size: 0.85rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .rekuperacja h2 {
+  font-size: 1.5rem;
+  color: #e07b22;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 15px auto;
+}
+
+main .rekuperacja h3 {
+  color: #e07b22;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 10px 10px;
+  text-align: center;
+}
+
+main .rekuperacja .polaroid-container .polaroid {
+  background: white;
+  -webkit-box-shadow: 0 0 1rem lightgray;
+          box-shadow: 0 0 1rem lightgray;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+main .rekuperacja .polaroid-container .polaroid h4 {
+  color: #e07b22;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 10px 10px;
+  font-size: 98%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+main .rekuperacja .polaroid-container .polaroid p {
+  width: 95%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 0.8rem;
+}
+
+main .rekuperacja .polaroid-container .polaroid img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+main .rekuperacja .polaroid-container .polaroid ul li {
+  list-style: none;
+}
+
+main .rekuperacja .polaroid-container .polaroid li {
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+
+main .rekuperacja .polaroid-container .polaroid iframe {
+  margin: 15px auto;
+  width: 300px;
+  max-width: 100%;
+  display: block;
+}
+
+main .rekuperacja .polaroid-container .polaroid p {
+  padding-top: 10px;
+}
+
+main .rekuperacja .polaroid-container .polaroid .item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .rekuperacja .polaroid-container .polaroid .item-container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 10px;
+  margin-top: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+  background: white;
+  max-width: 150px;
+  border: 1px solid #e07b22;
+  margin: 7px;
+}
+
+main .rekuperacja .polaroid-container .polaroid .item-container .item1 {
+  border: 1px solid #e07b22;
+  max-width: 170px;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.75rem;
+}
+
+main .rekuperacja .polaroid-container .polaroid .item-container .item1 li {
+  margin-top: 10px;
+  margin-left: 0;
 }
 
 @media screen and (min-width: 576px) {

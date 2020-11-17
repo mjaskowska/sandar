@@ -15,6 +15,9 @@ body {
 
 header {
   background-color: white;
+  border-bottom: 1px solid #a09e9e;
+  -webkit-box-shadow: 0px 0px 0.8rem #c4bfbf;
+          box-shadow: 0px 0px 0.8rem #c4bfbf;
 }
 
 header nav {
@@ -22,9 +25,6 @@ header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #a09e9e;
-  -webkit-box-shadow: 0px 0px 0.8rem #c4bfbf;
-          box-shadow: 0px 0px 0.8rem #c4bfbf;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -83,21 +83,23 @@ header nav .nav-list li a {
   color: inherit;
 }
 
-header nav button {
+header button {
+  display: block;
   text-decoration: none;
-  background-color: white;
+  background-color: #e07b22;
   border: none;
   outline: none;
   padding: 5px 15px;
-  margin: auto 30px 15px auto;
-  color: #e07b22;
+  margin: 5px auto;
+  color: white;
   font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-header nav button:hover {
-  color: white;
-  background-color: #e07b22;
-  border-radius: 5px;
+header button:hover {
+  color: #dbdbdb;
+  background-color: #ce670e;
 }
 
 main {
@@ -139,7 +141,6 @@ main .o-nas {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 150px;
-  display: none;
 }
 
 main .o-nas .title {
@@ -289,7 +290,6 @@ main .pompy {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 100px;
-  display: none;
 }
 
 main .pompy h2 {

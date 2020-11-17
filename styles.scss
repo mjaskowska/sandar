@@ -14,6 +14,7 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     background: rgb(250, 248, 248);
+   
     
     
 }
@@ -113,15 +114,16 @@ body {
 
 header {
     background-color: white;
+    border-bottom: 1px solid rgb(160, 158, 158);
+    box-shadow: 0px 0px 0.8rem rgb(196, 191, 191);
     nav {
         width: 100%;
         display: flex;
-        border-bottom: 1px solid rgb(160, 158, 158);
-        box-shadow: 0px 0px 0.8rem rgb(196, 191, 191);
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-end;
         padding: 0 10px;
+        
         
         .logo {
             margin: 5px;
@@ -165,21 +167,25 @@ header {
             }
            
         } 
-        button {
-            text-decoration: none;
-            background-color: white;
-            border: none;
-            outline: none;
-            padding: 5px 15px;
-            margin: auto 30px 15px auto;
-            color: $orange;
-            font-weight: bold;
+    }
+    button {
+        display: block;
+        text-decoration: none;
+        background-color: $orange;
+        border: none;
+        outline: none;
+        padding: 5px 15px;
+        margin: 5px auto;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        
 
-            &:hover {
-                color: white;
-                background-color: $orange;
-                border-radius: 5px;
-            }
+        &:hover {
+            color: rgb(219, 219, 219);
+            background-color: rgb(206, 103, 14);
+            
         }
     }
 }
@@ -211,11 +217,10 @@ main {
         }
     }
     
-    .o-nas{        
+    .o-nas {   
         @include article();
         margin-bottom: 150px;
-        display: none;
-       
+        
         .title {
             @include title();
         }
@@ -294,15 +299,14 @@ main {
     .pompy {
     @include article();    
     margin-bottom: 100px;
-    display: none;
-    h2 {
-        @include title();
-        
-    }
-    h3{
+    
+        h2 {
+         @include title(); 
+        }
+        h3{
         @include mid-title();
         text-align: center;
-    }
+        }
     
     .item-container {
         @include item-container();
@@ -337,47 +341,50 @@ main {
     }
     }
 
-.kolektory {
-    @include article();
-    margin-bottom: 100px;
-    display: none;
-    h2 {
-        @include title();
-    }
-    h3 {
-        @include mid-title();
-    }
-    .polaroid-container{
+    .kolektory {
+        @include article();
+        margin-bottom: 100px;
+        display: none;
+        h2 {
+            @include title();
+        }
+        h3 {
+            @include mid-title();
+        }
+        .polaroid-container{
         
-        .polaroid{
-            @include polaroid();
-            p{
-                padding-top: 15px;
-            }
-            img {
-                width: 65%;
-            }
+            .polaroid{
+                @include polaroid();
+                p{
+                    padding-top: 15px;
+                }
+                img {
+                    width: 65%;
+                }
             
+            }
         }
     }
-}
+
     .rekuperacja {
         display: none;
-         @include article();
-         h2 {
-             @include title();
-         }
-         h3 {
+        @include article();
+        h2 {
+            @include title();
+        }
+        h3 {
              @include mid-title();
              text-align: center;
-         }
+        }
 
-         .polaroid-container{
+        .polaroid-container{
 
-             .polaroid{
-                 @include polaroid();
-                 p{
-                 padding-top: 10px; }
+            .polaroid{
+                @include polaroid();
+
+                p{
+                padding-top: 10px; 
+                }
 
                 .item-container {
                     display: flex;
@@ -403,18 +410,18 @@ main {
                             margin-left: 0;
                         }
                     }
-
                 }
-
-             }
-         }
-
+            }
+        }
     }
+
     .ogrzewanie {
         @include article();
+        
         h2 {
             @include title();
         }
+
         .polaroid-container{
             
             .polaroid{
@@ -437,9 +444,9 @@ main {
                         margin: 7px;
                     }
                 }
+            }
         }
     }
- }
 }
 // grid areas names
 // #polaroid1 {
@@ -476,10 +483,7 @@ main {
     
     .item-container{
            grid-template-columns: repeat(4, 1fr);
-           
-        }
-    
-    
+    }
  }
 
  @media screen and (min-width: 768px){
@@ -487,7 +491,6 @@ main {
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 7px;
     }
-    
  }
 
  @media screen and (min-width: 850px){
@@ -496,10 +499,10 @@ main {
         grid-gap: 7px;
     }
     .pompy {
-        .polaroid-container
-        {
+        .polaroid-container{
             width: 70vw;
             margin: 0 auto;
+
             .polaroid{
                 p{
                     width: 75vw;
@@ -511,7 +514,6 @@ main {
             }
         }
     }
-    
  }
  
  @media screen and (min-width: 992px) {

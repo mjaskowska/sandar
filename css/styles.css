@@ -10,7 +10,6 @@ body {
   height: 100vh;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
-  background: #faf8f8;
 }
 
 header {
@@ -134,127 +133,58 @@ main .nibe-banner img {
 }
 
 main .o-nas {
-  max-width: 95vw;
-  margin: 5px auto 5px auto;
-  font-size: 0.85rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 150px;
-}
-
-main .o-nas .title {
-  font-size: 1.5rem;
-  color: #e07b22;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 15px auto;
-}
-
-main .o-nas .mid-title {
-  color: #e07b22;
-  font-size: 1rem;
-  font-style: italic;
-  margin: 10px 10px;
-}
-
-main .o-nas p {
-  padding-top: 20px;
-}
-
-main .o-nas .energia-img img {
-  max-height: 20vh;
-  max-width: 100%;
   display: block;
-  margin-right: 0;
-  margin-left: auto;
 }
 
-main .o-nas .range-items {
-  margin: 10px auto 25px auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[autofit];
-      grid-template-columns: repeat(autofit, 1fr);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+main .o-nas .img-part {
   position: relative;
 }
 
-main .o-nas .range-items .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5px 10px;
-  margin-top: 5px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  font-size: 0.7rem;
-  background: white;
-  -webkit-box-shadow: 0 0 1em lightgrey;
-          box-shadow: 0 0 1em lightgrey;
-  border: 1px solid #e07b22;
-}
-
-main .o-nas .brands-items {
-  margin: 10px auto 25px auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[autofit];
-      grid-template-columns: repeat(autofit, 1fr);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  position: relative;
-}
-
-main .o-nas .brands-items .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5px 10px;
-  margin-top: 5px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  font-size: 0.7rem;
-  background: white;
-  -webkit-box-shadow: 0 0 1em lightgrey;
-          box-shadow: 0 0 1em lightgrey;
-}
-
-main .o-nas .brands-items .item img {
-  height: 30px;
-  padding: 2px;
-}
-
-main .o-nas button {
-  padding: 7px 25px;
-  margin: 5px 0px;
-  font-size: 0.7rem;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 2em #949393;
-          box-shadow: 0px 0px 2em #949393;
-  border: none;
-  background-color: #e07b22;
+main .o-nas .img-part .title {
+  font-size: 2rem;
   color: white;
-  cursor: pointer;
-  display: block;
-  margin: 25px auto 70px auto;
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+main .o-nas .img-part p {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  width: 70%;
+  line-height: 1.1;
+  max-height: 50vh;
+}
+
+main .o-nas .img-part .background-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right bottom;
+     object-position: right bottom;
+  width: 100%;
+  position: relative;
+  max-height: 100vh;
+  min-height: 90vh;
+}
+
+main .o-nas .img-part .energia-img {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  max-width: 80%;
+  max-height: 20vh;
+}
+
+main .o-nas h4 {
+  text-align: center;
 }
 
 main .contact-section {
@@ -293,11 +223,10 @@ main .pompy {
 }
 
 main .pompy h2 {
-  font-size: 1.5rem;
-  color: #e07b22;
+  font-size: 2rem;
+  color: white;
   text-transform: uppercase;
-  text-align: center;
-  margin: 15px auto;
+  text-align: left;
 }
 
 main .pompy h3 {
@@ -420,11 +349,10 @@ main .kolektory {
 }
 
 main .kolektory h2 {
-  font-size: 1.5rem;
-  color: #e07b22;
+  font-size: 2rem;
+  color: white;
   text-transform: uppercase;
-  text-align: center;
-  margin: 15px auto;
+  text-align: left;
 }
 
 main .kolektory h3 {
@@ -501,11 +429,10 @@ main .rekuperacja {
 }
 
 main .rekuperacja h2 {
-  font-size: 1.5rem;
-  color: #e07b22;
+  font-size: 2rem;
+  color: white;
   text-transform: uppercase;
-  text-align: center;
-  margin: 15px auto;
+  text-align: left;
 }
 
 main .rekuperacja h3 {
@@ -631,11 +558,10 @@ main .ogrzewanie {
 }
 
 main .ogrzewanie h2 {
-  font-size: 1.5rem;
-  color: #e07b22;
+  font-size: 2rem;
+  color: white;
   text-transform: uppercase;
-  text-align: center;
-  margin: 15px auto;
+  text-align: left;
 }
 
 main .ogrzewanie .polaroid-container .polaroid {

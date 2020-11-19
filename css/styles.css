@@ -6,7 +6,7 @@
 }
 
 body {
-  width: 100vw;
+  width: 99vw;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -153,8 +153,8 @@ main .o-nas .img-part .background-img img {
      object-position: right 80%;
   width: 100%;
   position: relative;
-  max-height: 82vh;
-  min-height: 80vh;
+  max-height: 90vh;
+  min-height: 90vh;
   z-index: -1;
 }
 
@@ -291,8 +291,8 @@ main .pompy .top-page .img-part .background-img img {
      object-position: right 60%;
   width: 100%;
   position: relative;
-  max-height: 72vh;
-  min-height: 72vh;
+  max-height: 87vh;
+  min-height: 87vh;
   z-index: -1;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
@@ -326,7 +326,6 @@ main .pompy .top-page .item-container {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-gap: 0;
-  display: relative;
 }
 
 main .pompy .top-page .item-container .item {
@@ -348,11 +347,11 @@ main .pompy .top-page .item-container .item {
   text-align: center;
   font-size: 0.9rem;
   color: white;
-  display: absolute;
   top: 50%;
   min-width: 130px;
   line-height: 1.2;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  white-space: wrap;
 }
 
 main .pompy .top-page .item-container .item li {
@@ -399,21 +398,30 @@ main .pompy .more-info {
 main .pompy .more-info h3 {
   text-align: center;
   font-size: 1.3rem;
-}
-
-main .pompy .more-info .item-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 0;
+  margin: 25px;
 }
 
 main .pompy .more-info .item-container .item {
   padding: 5px;
   color: white;
   margin: 2px;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .pompy .more-info .item-container .item h4 {
@@ -423,7 +431,7 @@ main .pompy .more-info .item-container .item h4 {
 }
 
 main .pompy .more-info .item-container .item p {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 main .pompy .more-info .item-container .item ul li {
@@ -439,11 +447,13 @@ main .pompy .more-info .item-container .item img {
 }
 
 main .pompy .more-info .item-container .polaroid1 {
-  background: black;
+  background: #393B44;
+  grid-area: pol1;
 }
 
 main .pompy .more-info .item-container .polaroid2 {
-  background: black;
+  background: #8D93AB;
+  grid-area: pol2;
 }
 
 main .pompy .more-info .item-container .polaroid3 {
@@ -451,19 +461,23 @@ main .pompy .more-info .item-container .polaroid3 {
   color: black;
   padding-left: 20px;
   text-align: justify;
+  grid-area: pol3;
 }
 
 main .pompy .more-info .item-container .polaroid4 {
-  background: black;
+  background: #393B44;
+  grid-area: pol4;
 }
 
 main .pompy .more-info .item-container .polaroid5 {
   background: white;
   color: black;
+  grid-area: pol5;
 }
 
 main .pompy .more-info .item-container .polaroid6 {
-  background: black;
+  background: #9099a8;
+  grid-area: pol6;
 }
 
 main .pompy .more-info .item-container .polaroid6 p {
@@ -471,11 +485,13 @@ main .pompy .more-info .item-container .polaroid6 p {
 }
 
 main .pompy .more-info .item-container .polaroid7 {
-  background: black;
+  background: #9099a8;
+  grid-area: pol7;
 }
 
 main .pompy .more-info .item-container .polaroid8 {
-  background: black;
+  background: #9099a8;
+  grid-area: pol8;
 }
 
 main .kolektory {
@@ -872,6 +888,14 @@ main .nibe-banner img {
   main .pompy .img-part p {
     width: 50%;
   }
+  main .pompy .more-info .item-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+        grid-template-areas: "pol1 pol3" "pol2 pol3" "pol2 pol3" "pol4 pol3" "pol5 pol6" "pol5 pol7" "pol5 pol8";
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -891,6 +915,7 @@ main .nibe-banner img {
     display: grid;
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
+    grid-gap: 0;
   }
   main .o-nas .img-part p {
     width: 60%;
@@ -906,7 +931,7 @@ main .nibe-banner img {
   main .o-nas .range-items .item {
     font-size: 0.85rem;
     min-height: 150px;
-    max-height: calc(80vh / 3);
+    max-height: calc(90vh / 3);
     grid-gap: 0;
   }
   main .pompy .top-page {
@@ -930,8 +955,14 @@ main .nibe-banner img {
   }
   main .pompy .top-page .item-container .item {
     min-height: 150px;
-    max-height: calc(70vh /3);
+    max-height: calc(87vh /3);
     grid-gap: 0;
+    padding: 1px;
+  }
+  main .pompy .more-info .item-container {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "pol1 pol2 pol4 pol3" "pol1 pol2 pol4 pol3" "pol5 pol5 pol6 pol3" "pol5 pol5 pol7 pol8";
   }
   main .nibe-banner {
     margin: 0;

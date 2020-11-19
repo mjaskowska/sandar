@@ -13,7 +13,7 @@ $brown5: #BB7000;
     box-sizing: border-box;
 }
 body {
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
@@ -243,8 +243,8 @@ main {
                 object-position: right 80%;
                 width: 100%;
                 position: relative;
-                max-height: 82vh;
-                min-height: 80vh;
+                max-height: 90vh;
+                min-height: 90vh;
                 z-index: -1;
                 }
         }
@@ -350,8 +350,8 @@ main {
                     object-position: right 60%;
                     width: 100%;
                     position: relative;
-                    max-height: 72vh;
-                    min-height: 72vh;
+                    max-height: 87vh;
+                    min-height: 87vh;
                     z-index: -1;
                     transform: scaleX(-1);
                     }
@@ -381,14 +381,14 @@ main {
     
         .item-container {
               @include item-container();
-                display: relative;
+                
             .item{
                 @include item();
-                display: absolute;
                 top: 50%;
                 min-width: 130px;
                 line-height: 1.2;
-                font-size: 0.7rem;
+                font-size: 0.9rem;
+                white-space: wrap;
                 
                 li {
                     list-style: none;
@@ -428,19 +428,24 @@ main {
             h3{
                 text-align: center;
                 font-size: 1.3rem;
+                margin: 25px;
     
             }
             .item-container{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 0;
-                
+                                
                 .item{
+                    
                     padding:5px;
                     color: white;
                     margin: 2px;
-                    font-size: 0.9rem;
-                   
+                    font-size: 1rem;
+                   text-align: justify;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: center;
+                   align-items: center;
+                   flex-wrap: wrap;
+
                     h4{
                         text-align: center;
                         font-size: 1.2rem;
@@ -448,7 +453,7 @@ main {
                     }
                     p{
                         
-                        margin-bottom: 40px;
+                        margin-bottom: 20px;
                     }
                     ul {
                         li{
@@ -464,35 +469,43 @@ main {
                     }
                 }
                 .polaroid1{
-                    background: black;
+                    background:  #393B44;
+                    grid-area: pol1;
                 }
                 .polaroid2{
-                    background: black;
+                    background: #8D93AB;
+                    grid-area: pol2;
                 }
                 .polaroid3{
                     background: #f3f5f4;
                     color: black;
                     padding-left: 20px;
                     text-align: justify;
+                    grid-area: pol3;
                 }
                 .polaroid4{
-                    background: black;
+                    background: #393B44;
+                    grid-area: pol4;
                 }
                 .polaroid5{
                     background: white;
                     color: black;
+                    grid-area: pol5;
                 }
                 .polaroid6{
-                    background: black;
+                    background: #9099a8;
+                    grid-area: pol6;
                     p{
                         text-align: center;
                     }
                 }
                 .polaroid7{
-                    background: black;
+                    background: #9099a8;
+                    grid-area: pol7;
                 }
                 .polaroid8{
-                    background: black;
+                    background: #9099a8;
+                    grid-area: pol8;
                 }
 
             }
@@ -626,31 +639,7 @@ main {
         }
     }
 }
-// grid areas names
-// #polaroid1 {
-//     grid-area: polaroid1;
-// }
-// #polaroid2 {
-//     grid-area: polaroid2;
-// }
-// #polaroid3 {
-//     grid-area: polaroid3;
-// }
-// #polaroid4 {
-//     grid-area: polaroid4;
-// }
-// #polaroid5 {
-//     grid-area: polaroid5;
-// }
-// #polaroid6 {
-//     grid-area: polaroid6;
-// }
-// #polaroid7 {
-//     grid-area: polaroid7;
-// }
-// #polaroid8 {
-//     grid-area: polaroid1;
-// }
+
 @media screen and (min-width: 372px){
     header{
         height: 140px;
@@ -712,7 +701,23 @@ main {
                     width: 50%;
                 }
             }
+            .more-info{
+                .item-container{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap:0;
+                    grid-template-areas: "pol1 pol3"
+                                        "pol2 pol3"
+                                        "pol2 pol3"
+                                        "pol4 pol3"
+                                        "pol5 pol6"
+                                        "pol5 pol7"
+                                        "pol5 pol8";
+                   
+                }
+            }
         }
+        
     }
  }
 
@@ -745,6 +750,7 @@ main {
         .o-nas {
             display: grid;
             grid-template-columns: 2fr 1fr;
+            grid-gap: 0;
                         
             .img-part{
                 
@@ -760,7 +766,7 @@ main {
                 .item{
                     font-size: 0.85rem;
                     min-height: 150px;
-                    max-height: calc(80vh / 3);
+                    max-height: calc(90vh / 3);
                     grid-gap: 0;
                 }
             }
@@ -783,10 +789,21 @@ main {
                 align-items: stretch;
                 .item{
                     min-height: 150px;
-                    max-height: calc(70vh /3);
+                    max-height: calc(87vh /3);
                     grid-gap:0;
+                    padding: 1px;
                 }
             }
+            }
+            .more-info{
+                .item-container{
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-template-areas: "pol1 pol2 pol4 pol3"
+                                        "pol1 pol2 pol4 pol3"
+                                        "pol5 pol5 pol6 pol3"
+                                        "pol5 pol5 pol7 pol8"
+                                        ;
+                }
             }
         }
         .nibe-banner {

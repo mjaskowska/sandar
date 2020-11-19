@@ -25,6 +25,7 @@ const pompySection = document.querySelector('.pompy');
 const kolektorySection = document.querySelector('.kolektory');
 const rekuperacjaSection = document.querySelector('.rekuperacja');
 const ogrzewanieSection = document.querySelector('.ogrzewanie');
+const nibeBanner = document.querySelector('.nibe');
 
 // event listeners
 oNasBtn.addEventListener("click", toggleONas);
@@ -41,6 +42,7 @@ function toggleONas() {
         kolektorySection.style.display = "none"
         rekuperacjaSection.style.display = "none";
         ogrzewanieSection.style.display = "none";
+        nibeBanner.style.display="block";
     }
 
 }
@@ -51,6 +53,7 @@ function togglePompy() {
         kolektorySection.style.display = "none"
         rekuperacjaSection.style.display = "none";
         ogrzewanieSection.style.display = "none";
+        nibeBanner.style.display="none";
     }
 
 }
@@ -62,6 +65,7 @@ function toggleKolektory() {
         kolektorySection.style.display = "block"
         rekuperacjaSection.style.display = "none";
         ogrzewanieSection.style.display = "none";
+        nibeBanner.style.display="none";
     }
 
 }
@@ -72,6 +76,7 @@ function toggleRekuperacja() {
         kolektorySection.style.display = "none"
         rekuperacjaSection.style.display = "block";
         ogrzewanieSection.style.display = "none";
+        nibeBanner.style.display="none";
     }
 
 }
@@ -82,6 +87,7 @@ function toggleOgrzewanie() {
         kolektorySection.style.display = "none"
         rekuperacjaSection.style.display = "none";
         ogrzewanieSection.style.display = "block";
+        nibeBanner.style.display="none";
     }
 
 }

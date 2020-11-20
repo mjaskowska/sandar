@@ -108,7 +108,7 @@ main .o-nas .img-part {
 }
 
 main .o-nas .img-part .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
   text-transform: uppercase;
   text-align: left;
@@ -299,7 +299,7 @@ main .pompy .top-page .img-part .background-img img {
 }
 
 main .pompy .top-page .img-part .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
   text-transform: uppercase;
   text-align: left;
@@ -403,7 +403,6 @@ main .pompy .more-info h3 {
 
 main .pompy .more-info .item-container .item {
   padding: 5px;
-  color: white;
   margin: 2px;
   font-size: 1rem;
   text-align: justify;
@@ -422,6 +421,7 @@ main .pompy .more-info .item-container .item {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  color: white;
 }
 
 main .pompy .more-info .item-container .item h4 {
@@ -494,85 +494,211 @@ main .pompy .more-info .item-container .polaroid8 {
   grid-area: pol8;
 }
 
-main .kolektory {
-  max-width: 95vw;
-  margin: 5px auto 5px auto;
-  font-size: 0.85rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 100px;
-  display: none;
+main .kolektory .top-page .img-part {
+  position: relative;
 }
 
-main .kolektory h2 {
-  font-size: 2rem;
+main .kolektory .top-page .img-part .background-img::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.98)), color-stop(95%, rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.5) 95%);
+}
+
+main .kolektory .top-page .img-part .background-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 40%;
+     object-position: center 40%;
+  width: 100%;
+  position: relative;
+  max-height: 80vh;
+  min-height: 80vh;
+  z-index: -1;
+}
+
+main .kolektory .top-page .img-part .title {
+  font-size: 2.5rem;
   color: white;
   text-transform: uppercase;
   text-align: left;
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
 
-main .kolektory h3 {
-  color: #BB7000;
-  font-size: 1rem;
-  font-style: italic;
-  margin: 10px 10px;
-}
-
-main .kolektory .polaroid-container .polaroid {
-  background: white;
-  -webkit-box-shadow: 0 0 1rem lightgray;
-          box-shadow: 0 0 1rem lightgray;
-  padding-bottom: 25px;
-  text-align: center;
-}
-
-main .kolektory .polaroid-container .polaroid h4 {
-  color: #BB7000;
-  font-size: 1rem;
-  font-style: italic;
-  margin: 10px 10px;
-  font-size: 98%;
-  text-align: center;
-  padding-top: 10px;
-}
-
-main .kolektory .polaroid-container .polaroid p {
-  width: 95%;
-  margin: 0 auto;
-  text-align: justify;
+main .kolektory .top-page .img-part p {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: white;
+  text-transform: uppercase;
   font-size: 0.8rem;
+  width: 70%;
+  line-height: 1.3;
+  max-height: 50vh;
 }
 
-main .kolektory .polaroid-container .polaroid img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
+main .kolektory .more-info {
+  width: 99vw;
 }
 
-main .kolektory .polaroid-container .polaroid ul li {
+main .kolektory .more-info h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 25px;
+}
+
+main .kolektory .more-info .item-container .item {
+  padding: 5px;
+  margin: 2px;
+  font-size: 1rem;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .kolektory .more-info .item-container .item h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px auto;
+}
+
+main .kolektory .more-info .item-container .item p {
+  margin-bottom: 20px;
+}
+
+main .kolektory .more-info .item-container .item ul li {
+  text-align: center;
   list-style: none;
 }
 
-main .kolektory .polaroid-container .polaroid li {
-  width: 90%;
-  margin: 0 auto;
-  padding-left: 10px;
-}
-
-main .kolektory .polaroid-container .polaroid iframe {
-  margin: 15px auto;
-  width: 300px;
-  max-width: 100%;
+main .kolektory .more-info .item-container .item img {
   display: block;
+  max-width: 100%;
+  max-height: 350px;
+  margin: 0 auto;
 }
 
-main .kolektory .polaroid-container .polaroid p {
-  padding-top: 15px;
+main .kolektory .more-info .item-container .item img {
+  max-width: 60%;
+  height: auto;
 }
 
-main .kolektory .polaroid-container .polaroid img {
-  width: 65%;
+main .kolektory .more-info .item-container .polaroid1 {
+  grid-area: pol1;
+}
+
+main .kolektory .more-info .item-container .polaroid2 {
+  background: #393B44;
+  grid-area: pol2;
+  color: white;
+}
+
+main .kolektory .more-info .item-container .polaroid3 {
+  background: #393B44;
+  grid-area: pol3;
+  color: white;
+}
+
+main .kolektory .more-info h4 {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 20px;
+}
+
+main .kolektory .more-info .item-container1 .item {
+  padding: 5px;
+  margin: 2px;
+  font-size: 1rem;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .kolektory .more-info .item-container1 .item h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px auto;
+}
+
+main .kolektory .more-info .item-container1 .item p {
+  margin-bottom: 20px;
+}
+
+main .kolektory .more-info .item-container1 .item ul li {
+  text-align: center;
+  list-style: none;
+}
+
+main .kolektory .more-info .item-container1 .item img {
+  display: block;
+  max-width: 100%;
+  max-height: 350px;
+  margin: 0 auto;
+}
+
+main .kolektory .more-info .item-container1 .item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+main .kolektory .more-info .item-container1 .polaroid4 {
+  grid-area: pol4;
+}
+
+main .kolektory .more-info .item-container1 .polaroid4 img {
+  max-width: 90%;
+  height: auto;
+}
+
+main .kolektory .more-info .item-container1 .polaroid5 {
+  grid-area: pol5;
+}
+
+main .kolektory .more-info .item-container1 .polaroid5 img {
+  max-width: 90%;
+  height: auto;
+}
+
+main .kolektory .more-info .item-container1 .polaroid6 {
+  grid-area: pol6;
+}
+
+main .kolektory .more-info .item-container1 .polaroid6 img {
+  max-width: 90%;
+  height: auto;
 }
 
 main .rekuperacja {
@@ -586,7 +712,7 @@ main .rekuperacja {
 }
 
 main .rekuperacja h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
   text-transform: uppercase;
   text-align: left;
@@ -719,7 +845,7 @@ main .ogrzewanie {
 }
 
 main .ogrzewanie h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
   text-transform: uppercase;
   text-align: left;
@@ -856,6 +982,9 @@ main .nibe-banner img {
   main .contact-section {
     top: 120px;
   }
+  main .kolektory .top-page .img-part p {
+    top: 40%;
+  }
 }
 
 @media screen and (min-width: 522px) {
@@ -876,6 +1005,9 @@ main .nibe-banner img {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
+  main .kolektory .top-page .img-part p {
+    top: 40%;
+  }
 }
 
 @media screen and (min-width: 612px) {
@@ -895,6 +1027,24 @@ main .nibe-banner img {
         grid-template-columns: 1fr 1fr;
     grid-gap: 0;
         grid-template-areas: "pol1 pol3" "pol2 pol3" "pol2 pol3" "pol4 pol3" "pol5 pol6" "pol5 pol7" "pol5 pol8";
+  }
+  main .kolektory .top-page .img-part p {
+    width: 60%;
+    top: 40%;
+  }
+  main .kolektory .more-info .item-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "pol1 pol2" "pol1 pol3";
+  }
+  main .kolektory .more-info .item-container1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "pol4 pol5" "pol6 .";
   }
 }
 
@@ -963,6 +1113,17 @@ main .nibe-banner img {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas: "pol1 pol2 pol4 pol3" "pol1 pol2 pol4 pol3" "pol5 pol5 pol6 pol3" "pol5 pol5 pol7 pol8";
+  }
+  main .kolektory .top-page .img-part p {
+    width: 40%;
+    top: 40%;
+  }
+  main .kolektory .more-info .item-container1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "pol4 pol5 pol6";
   }
   main .nibe-banner {
     margin: 0;

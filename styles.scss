@@ -274,7 +274,7 @@ main {
                 img{
                 object-fit: cover;
                 object-position: right 80%;
-                width: 100%;
+                width: 100vw;
                 position: relative;
                 max-height: 90vh;
                 min-height: 90vh;
@@ -297,6 +297,7 @@ main {
 
             .item{
                 @include item();
+                min-height: 300px;
             }
             .orange1 {
                 background: $orange;
@@ -472,10 +473,12 @@ main {
                     }
                 .polaroid1{
                     background:  #393B44;
+                    
                     grid-area: pol1;
                 }
                 .polaroid2{
-                    background: #8D93AB;
+                    
+                    background: #211814;
                     grid-area: pol2;
                 }
                 .polaroid3{
@@ -495,18 +498,18 @@ main {
                     grid-area: pol5;
                 }
                 .polaroid6{
-                    background: #9099a8;
+                    background: #211814;
                     grid-area: pol6;
                     p{
                         text-align: center;
                     }
                 }
                 .polaroid7{
-                    background: #9099a8;
+                    background: #211814;
                     grid-area: pol7;
                 }
                 .polaroid8{
-                    background: #9099a8;
+                    background: #211814;
                     grid-area: pol8;
                 }
 
@@ -641,53 +644,137 @@ main {
     }
 
     .rekuperacja {
-        display: none;
-        @include article();
-        h2 {
-            @include title();
-        }
-        h3 {
-             @include mid-title();
-             text-align: center;
-        }
+        .top-page{
+            .img-part{
+                position: relative;
 
-        .polaroid-container{
+                .background-img{
 
-            .polaroid{
-                @include polaroid();
-
-                p{
-                padding-top: 10px; 
-                }
-
-                .item-container {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 85vh;
+                        display: inline-block;
+                        background: linear-gradient(to right, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.3) 90%);
+                    }
+                    img{
+                    object-fit: cover;
+                    object-position: 40% 20%;
+                    width: 100%;
+                    position: relative;
+                    max-height: 85vh;
+                    min-height: 85vh;
+                    z-index: -1;
                     
-                    .item {
-                        @include item();
-                        max-width: 150px;
-                        border: 1px solid $orange;
-                        margin: 7px;
                     }
-                    .item1 {
-                        border: 1px solid $orange;
-                        max-width: 170px;
-                        margin-bottom: 5px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        font-size: 0.75rem;
-                        li {
-                            margin-top: 10px;
-                            margin-left: 0;
-                        }
+                }
+                h2{
+                    @include title();
+                    position: absolute;
+                    top: 10%;
+                    left: 10%;
+
+                }
+                p{
+                    position: absolute;
+                    top: 30%;
+                    left: 10%;
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    width: 70%;
+                    line-height: 1.3;
+                    max-height: 50vh;
+                }
+            }
+            .item-container{
+                .item{
+                    color: white;
+                    background: black;
+                    @include item-in-container();
+                    p{
+                        margin: 0 auto;
+                        text-align: center;
+                       
                     }
+                    padding-bottom: 20px;
+                }
+                .zaleta1{
+                    background: #211814;
+                    grid-area: zal1;
+                    
+                }
+                .zaleta2{
+                    background: #0F0705;
+                    grid-area: zal2;
+                }
+                .zaleta3{
+                    background: #BB7000;
+                    grid-area:zal3;
+                    
+                }
+                .zaleta4{
+                    background: #29160B;
+                    grid-area: zal4;
                 }
             }
         }
+        .more-info{
+            .straty{
+                grid-area: straty;
+                margin: 20px auto;
+                h4{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+                .item-container{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 2px;
+
+                    .item {
+                        @include item-in-container();
+                        color: black;
+                        font-size: 0.9rem;
+                        text-align: center;
+                        border: 1px solid #29160B;
+                    }
+                }
+            }
+            .dlaczego-wybrac, .jak-dziala{
+                @include item-in-container();
+                h4{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+                p{
+                    
+                }                
+            }
+            .dlaczego-wybrac{
+                
+                grid-area: dlaczego;
+            }
+            .jak-dziala{
+                
+                grid-area: jak;
+            }
+            
+
+
+
+        }
+
     }
+
+
 
     .ogrzewanie {
         @include article();
@@ -785,6 +872,28 @@ main {
                 grid-template-columns: 1fr 1fr 1fr;
             }
         }
+        .rekuperacja{
+            .top-page{
+                .item-container{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 0;
+                    grid-template-areas: "zal1 zal2"
+                                        "zal3 zal4";
+                    p{
+                     font-size: 0.8rem;
+                     }   
+                }
+            }
+            .more-info{
+                .straty{
+                    .item-container{
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                        grid-template-rows: 1fr 1fr;
+                    }
+                }
+            }
+        }
         
     }
 }
@@ -803,6 +912,15 @@ main {
             .img-part{
                 p {
                     top: 40%;
+                }
+            }
+        }
+    }
+    .rekuperacja{
+        .top-page{
+            .img-part{
+                p {
+                    width: 50%;
                 }
             }
         }
@@ -885,6 +1003,36 @@ main {
                 
             }
         }
+        .rekuperacja{
+            .top-page{
+                .item-container{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-gap: 0;
+                    grid-template-areas: "zal1 zal2 zal3 zal4";
+                    p{
+                        font-size: 0.8rem;
+                    }            
+                }
+            }
+            .more-info{
+                display: grid;
+                grid-gap: 5px;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "straty straty"
+                                    "dlaczego jak";
+                .straty{
+                    
+                    .item-container{
+                        grid-template-columns: repeat(8, 1fr);
+                        grid-template-rows: 1fr;
+                    }
+                }
+                .jak-dziala{
+                    justify-content: flex-start;
+                }
+            }
+        }
     }
  }
 
@@ -905,13 +1053,14 @@ main {
                 }
             }
             .range-items{
-                grid-template-columns: repeat(6, 1fr);
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr 1fr;
                 align-items: stretch;
                 
                 .item{
-                    font-size: 0.85rem;
-                    min-height: 150px;
-                    max-height: calc(90vh / 3);
+                    font-size: 1.2rem;
+                    min-height: 300px;
+                    // max-height: calc(90vh / 3);
                     grid-gap: 0;
                 }
             }
@@ -957,16 +1106,55 @@ main {
                     p {
                         width: 40%;
                         top: 40%;
+                        font-size: 1rem;
                     }
                 }
             }
             .more-info{
+                margin-top: 40px;
                 .item-container1{
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
                     grid-template-areas: "pol4 pol5 pol6";
                     
                 }
+                h4{
+                    margin: 150px auto 50px auto;
+                }
+            }
+        }
+        .rekuperacja{
+            .top-page{
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+
+                .img-part{
+                    p {
+                        width: 65%;
+                        font-size: 1rem;
+                    }
+                }
+                .item-container{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: "zal1 zal2"
+                                        "zal3 zal4";
+                    align-items: stretch;
+                    grid-gap: 0;
+                    .item{
+                        
+                        height: calc((85vh /2)-2px);
+                    }
+                }
+            }
+            .more-info{
+                max-width: 95%;
+                margin: 50px auto 20px auto;
+                .jak-dziala, .dlaczego-wybrac{
+                    width: 95%;
+                    margin-top: 30px;
+                }
+                
             }
         }
         .nibe-banner {

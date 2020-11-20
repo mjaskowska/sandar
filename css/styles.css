@@ -951,91 +951,75 @@ main .rekuperacja .more-info .jak-dziala {
   grid-area: jak;
 }
 
-main .ogrzewanie {
-  max-width: 95vw;
-  margin: 5px auto 5px auto;
-  font-size: 0.85rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+main .ogrzewanie .top-page .img-part {
+  position: relative;
 }
 
-main .ogrzewanie h2 {
+main .ogrzewanie .top-page .img-part .background-img::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 85vh;
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.98)), color-stop(90%, rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.5) 90%);
+}
+
+main .ogrzewanie .top-page .img-part .background-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 80%;
+     object-position: center 80%;
+  width: 100%;
+  position: relative;
+  max-height: 85vh;
+  min-height: 85vh;
+  z-index: -1;
+}
+
+main .ogrzewanie .top-page .img-part h2 {
   font-size: 2.5rem;
   color: white;
   text-transform: uppercase;
   text-align: left;
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
 
-main .ogrzewanie .polaroid-container .polaroid {
-  background: white;
-  -webkit-box-shadow: 0 0 1rem lightgray;
-          box-shadow: 0 0 1rem lightgray;
-  padding-bottom: 25px;
-  text-align: center;
+main .ogrzewanie .top-page .img-part .text {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  color: white;
+  max-height: 50vh;
 }
 
-main .ogrzewanie .polaroid-container .polaroid h4 {
-  color: #BB7000;
-  font-size: 1rem;
-  font-style: italic;
-  margin: 10px 10px;
-  font-size: 98%;
-  text-align: center;
-  padding-top: 10px;
-}
-
-main .ogrzewanie .polaroid-container .polaroid p {
-  width: 95%;
-  margin: 0 auto;
-  text-align: justify;
+main .ogrzewanie .top-page .img-part .text p {
+  padding-top: 5px;
+  text-transform: uppercase;
   font-size: 0.8rem;
-}
-
-main .ogrzewanie .polaroid-container .polaroid img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-main .ogrzewanie .polaroid-container .polaroid ul li {
-  list-style: none;
-}
-
-main .ogrzewanie .polaroid-container .polaroid li {
   width: 90%;
-  margin: 0 auto;
-  padding-left: 10px;
 }
 
-main .ogrzewanie .polaroid-container .polaroid iframe {
-  margin: 15px auto;
-  width: 300px;
-  max-width: 100%;
-  display: block;
+main .ogrzewanie .top-page .item-container {
+  margin-top: -5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 0;
 }
 
-main .ogrzewanie .polaroid-container .polaroid img {
-  margin-top: 10px;
-  width: 70%;
-  max-width: 300px;
-}
-
-main .ogrzewanie .polaroid-container .polaroid .item-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main .ogrzewanie .polaroid-container .polaroid .item-container .item {
-  padding: 0 5px;
-  min-height: 150px;
-  max-height: 200px;
+main .ogrzewanie .top-page .item-container .item {
+  padding: 5px;
+  margin: 2px;
+  font-size: 1rem;
+  text-align: justify;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1043,17 +1027,246 @@ main .ogrzewanie .polaroid-container .polaroid .item-container .item {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   text-align: center;
-  font-size: 0.9rem;
   color: white;
-  max-width: 150px;
-  border: 1px solid #e07b22;
-  margin: 7px;
+}
+
+main .ogrzewanie .top-page .item-container .item h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px auto;
+}
+
+main .ogrzewanie .top-page .item-container .item p {
+  margin-bottom: 20px;
+}
+
+main .ogrzewanie .top-page .item-container .item ul li {
+  text-align: center;
+  list-style: none;
+}
+
+main .ogrzewanie .top-page .item-container .item img {
+  display: block;
+  max-width: 100%;
+  max-height: 350px;
+  margin: 0 auto;
+}
+
+main .ogrzewanie .top-page .item-container .zaleta1 {
+  background: #393B44;
+}
+
+main .ogrzewanie .top-page .item-container .zaleta2 {
+  background: #211814;
+}
+
+main .ogrzewanie .top-page .item-container .zaleta3 {
+  background: #2f3038;
+}
+
+main .ogrzewanie .top-page .item-container .zaleta4 {
+  background: #2b2f3d;
+}
+
+main .ogrzewanie .top-page .item-container .zaleta5 {
+  background: #2f3038;
+}
+
+main .ogrzewanie .top-page .item-container .zaleta6 {
+  background: #211814;
+}
+
+main .ogrzewanie .more-info {
+  margin-top: 30px;
+}
+
+main .ogrzewanie .more-info .podloga {
+  margin-top: 20px;
+  padding: 5px;
+  margin: 2px;
+  font-size: 1rem;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .ogrzewanie .more-info .podloga h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px auto;
+}
+
+main .ogrzewanie .more-info .podloga p {
+  margin-bottom: 20px;
+}
+
+main .ogrzewanie .more-info .podloga ul li {
+  text-align: center;
+  list-style: none;
+}
+
+main .ogrzewanie .more-info .podloga img {
+  display: block;
+  max-width: 100%;
+  max-height: 350px;
+  margin: 0 auto;
+}
+
+main .ogrzewanie .more-info .polaroid {
+  margin-top: 20px;
+  padding: 5px;
+  margin: 2px;
+  font-size: 1rem;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .ogrzewanie .more-info .polaroid h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px auto;
+}
+
+main .ogrzewanie .more-info .polaroid p {
+  margin-bottom: 20px;
+}
+
+main .ogrzewanie .more-info .polaroid ul li {
+  text-align: center;
+  list-style: none;
+}
+
+main .ogrzewanie .more-info .polaroid img {
+  display: block;
+  max-width: 100%;
+  max-height: 350px;
+  margin: 0 auto;
+}
+
+main .ogrzewanie .more-info .tradycyjne {
+  margin-top: 20px;
+  padding: 5px;
+  margin: 2px;
+  font-size: 1rem;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .ogrzewanie .more-info .tradycyjne h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px auto;
+}
+
+main .ogrzewanie .more-info .tradycyjne p {
+  margin-bottom: 20px;
+}
+
+main .ogrzewanie .more-info .tradycyjne ul li {
+  text-align: center;
+  list-style: none;
+}
+
+main .ogrzewanie .more-info .tradycyjne img {
+  display: block;
+  max-width: 100%;
+  max-height: 350px;
+  margin: 0 auto;
+}
+
+main .ogrzewanie .more-info .zrodlo-ciepla {
+  margin-top: 20px;
+  padding: 5px;
+  margin: 2px;
+  font-size: 1rem;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .ogrzewanie .more-info .zrodlo-ciepla h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px auto;
+}
+
+main .ogrzewanie .more-info .zrodlo-ciepla p {
+  margin-bottom: 20px;
+}
+
+main .ogrzewanie .more-info .zrodlo-ciepla ul li {
+  text-align: center;
+  list-style: none;
+}
+
+main .ogrzewanie .more-info .zrodlo-ciepla img {
+  display: block;
+  max-width: 100%;
+  max-height: 350px;
+  margin: 0 auto;
 }
 
 main .nibe-banner {
@@ -1144,6 +1357,29 @@ main .nibe-banner img {
   main .rekuperacja .top-page .img-part p {
     width: 50%;
   }
+  main .ogrzewanie .top-page .item-container {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  main .ogrzewanie .more-info {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    grid-gap: 15px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  main .ogrzewanie .more-info .podloga, main .ogrzewanie .more-info .polaroid, main .ogrzewanie .more-info .tradycyjne, main .ogrzewanie .more-info .zrodlo-ciepla {
+    margin: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 @media screen and (min-width: 612px) {
@@ -1181,6 +1417,9 @@ main .nibe-banner img {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "pol4 pol5" "pol6 .";
+  }
+  main .ogrzewanie .top-page .img-part .text {
+    width: 70%;
   }
 }
 
@@ -1226,6 +1465,9 @@ main .nibe-banner img {
 }
 
 @media screen and (min-width: 992px) {
+  header nav .nav-list li {
+    font-size: 1.2rem;
+  }
   main .o-nas {
     display: -ms-grid;
     display: grid;
@@ -1330,6 +1572,41 @@ main .nibe-banner img {
   main .rekuperacja .more-info .jak-dziala, main .rekuperacja .more-info .dlaczego-wybrac {
     width: 95%;
     margin-top: 30px;
+  }
+  main .ogrzewanie .top-page {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+  }
+  main .ogrzewanie .top-page .img-part .text {
+    width: 70%;
+  }
+  main .ogrzewanie .top-page .img-part .text p {
+    font-size: 1rem;
+  }
+  main .ogrzewanie .top-page .item-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+  }
+  main .ogrzewanie .more-info {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-gap: 15px;
+    width: 95%;
+    margin: 20px auto;
+  }
+  main .ogrzewanie .more-info .podloga, main .ogrzewanie .more-info .polaroid, main .ogrzewanie .more-info .tradycyjne, main .ogrzewanie .more-info .zrodlo-ciepla {
+    margin: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   main .nibe-banner {
     margin: 0;

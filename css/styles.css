@@ -1474,6 +1474,11 @@ main .nibe-banner img {
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
     grid-gap: 0;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   main .o-nas .img-part p {
     width: 60%;
@@ -1498,6 +1503,11 @@ main .nibe-banner img {
     display: grid;
     -ms-grid-columns: 4fr 2fr;
         grid-template-columns: 4fr 2fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   main .pompy .top-page .img-part p {
     width: 60%;
@@ -1546,6 +1556,11 @@ main .nibe-banner img {
     display: grid;
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   main .rekuperacja .top-page .img-part p {
     width: 65%;
@@ -1578,6 +1593,11 @@ main .nibe-banner img {
     display: grid;
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   main .ogrzewanie .top-page .img-part .text {
     width: 70%;

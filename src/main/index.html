@@ -20,30 +20,37 @@
   </head>
 
   <body>
-    <!-- <header>
+    <header>
       <nav>
-        <div class="logo">
-          <img id="nav-logo" src="../assets/logo-nobg.png" alt="logo" />
+        <img id="nav-logo" src="../assets/logo-nobg.png" alt="logo" />
+        <div class="hamburger">
+          <div class="lineTop line"></div>
+          <div class="lineMiddle line"></div>
+          <div class="lineBottom line"></div>
         </div>
         <ul class="nav-list">
-          <li id="nav-o-nas"><a href="#">O NAS</a></li>
-          <li id="nav-pomps"><a href="../pomps/pomps.html">POMPY CIEPŁA</a></li>
-          <li id="nav-panels">
+          <li class="nav-item nav-active"><a href="#">O NAS</a></li>
+          <li class="nav-item">
+            <a href="../pomps/pomps.html">POMPY CIEPŁA</a>
+          </li>
+          <li class="nav-item">
             <a href="../solar-panels/panels.html">KOLEKTORY SŁONECZNE</a>
           </li>
-          <li id="nav-recuperation">
+          <li class="nav-item">
             <a href="../recuperation/recuperation.html">REKUPERACJA</a>
           </li>
-          <li id="nav-floor">
+          <li class="nav-item">
             <a href="../floor-heating/floor.html">OGRZEWANIE PODŁOGOWE</a>
           </li>
+          
         </ul>
-        <button class="nav-contact" onclick="toggleContact()">KONTAKT</button>
+        <button class="nav-btn" onclick="toggleContact()">KONTAKT</button>
+        
       </nav>
-    </header> -->
+    </header>
 
     <main>
-      <section class="contact-section">
+      <section class="contact-popup contact-hidden">
         <h2 class="contact-title">SKONTAKTUJ SIĘ Z NAMI!</h2>
         <div class="contact-info">
           <p>Dariusz Jaśkowski</p>
@@ -62,15 +69,18 @@
 
       <section class="about">
         <div class="hero">
-          <img
-            class="hero-bg"
-            src="./img/o-nas-background.jpg"
-            alt="Photo by Joshua Hoehne on Unsplash"
-          />
-          <img src="./img/energia2.png" class="energy-img" />
+          <div class="bg-overlay">
+            <img
+              class="hero-bg"
+              src="../assets/about-bg.jpg"
+              alt="Photo by Joshua Hoehne on Unsplash"
+            />
+          </div>
+
+          <img src="../assets/energy.png" class="energy-img" />
           <div class="hero-content">
-            <h2 class="title">O NAS</h2>
-            <p>
+            <h2 class="about-title">O NAS</h2>
+            <p class="about-description">
               Przedmiotem działania firmy jest profesjonalne doradztwo oraz
               kompleksowe wykonawstwo nowoczesnych i energooszczędnych
               instalacji grzewczych wykorzystujących odnawialne źródła energii.
@@ -86,21 +96,32 @@
           </div>
         </div>
 
+        <h3 class="mid-title">OFERUJEMY</h3>
+
         <div class="items">
-          <div class="item orange1">
+          <div class="item">
             INSTALACJE KOLEKTORÓW SŁONECZNYCH I POMP CIEPŁA
           </div>
-          <div class="item orange2">KOTŁOWNIE GAZOWE I OLEJOWE</div>
-          <div class="item orange3">
-            INSTALACJE CENTRALNEGO OGRZEWANIA (PODŁOGOWE, ŚCIENNE, GRZEJNIKOWE)
-          </div>
-          <div class="item orange4">
-            INSTALACJE WEWNĘTRZNE WODNO-KANALIZACYJNE ORAZ CIEPŁEJ WODY
-            UŻYTKOWEJ
-          </div>
-          <div class="item orange5">INSTALACJE KLIMATYZACYJNE</div>
-          <div class="item orange1">
-            INSTALACJE WENTYLACJI MECHANICZNEJ Z ODZYSKIEM CIEPŁA - REKUPERACJA
+          <div class="item">KOTŁOWNIE GAZOWE I OLEJOWE</div>
+          <div class="item">INSTALACJE CENTRALNEGO OGRZEWANIA</div>
+          <div class="item">INSTALACJE WEWNĘTRZNE WODNO-KANALIZACYJNE</div>
+          <div class="item">INSTALACJE KLIMATYZACYJNE</div>
+          <div class="item">INSTALACJE Z REKUPERACJĄ</div>
+        </div>
+      </section>
+      <section class="contact-section">
+        <h2 class="contact-title">SKONTAKTUJ SIĘ Z NAMI!</h2>
+        <div class="contact-info">
+          <p>Dariusz Jaśkowski</p>
+          <i class="fa fa-envelope"></i>
+          <p>dariuszjaskowski@wp.pl</p>
+          <i class="fa fa-phone"></i>
+          <p>607-940-532</p>
+          <i class="fa fa-home"></i>
+          <div class="address">
+            <p>Kostomłoty Drugie ul.Starowiejska 80</p>
+            <p>26-085 Miedziana Góra</p>
+            <p>woj. świętokrzyskie</p>
           </div>
         </div>
       </section>
@@ -112,6 +133,11 @@
       </a>
     </footer>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+      integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./main.js" async defer></script>
   </body>
 </html>

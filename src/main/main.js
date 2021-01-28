@@ -2,18 +2,22 @@
 const contactSection = document.querySelector(".contact-popup");
 const closeBtn = document.querySelector(".contact-popup-close");
 const contactBtn = document.querySelector(".nav-contact-btn");
+const sideContactBtn = document.querySelector('.side-contact-btn')
+
 
 closeBtn.addEventListener("click", (e) => {
   e.preventDefault();
   contactSection.style.display = "none";
 });
 
-contactBtn.addEventListener("click", (e) => {
+const togglePopupContact = (e) => {
   e.preventDefault();
   contactSection.style.display === "none"
     ? (contactSection.style.display = "block")
     : (contactSection.style.display = "none");
-});
+}
+contactBtn.addEventListener("click", togglePopupContact);
+sideContactBtn.addEventListener('click', togglePopupContact)
 
 // hamburger
 const hamburger = document.querySelector(".hamburger");

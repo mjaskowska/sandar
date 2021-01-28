@@ -322,7 +322,13 @@ main {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
+  .about-description {
+    width: 60%;
+  }
+}
+
+@media (min-width: 850px) {
   .about-title {
     top: 40%;
   }

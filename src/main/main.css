@@ -67,7 +67,7 @@ nav {
   border-bottom: 2px solid #cd7c11;
 }
 
-.nav-btn {
+.nav-contact-btn {
   display: none;
   color: white;
   background-color: #292929b2;
@@ -80,7 +80,7 @@ nav {
   transition: all 0.25s ease-in-out;
 }
 
-.nav-btn:hover {
+.nav-contact-btn:hover {
   background: transparent;
   color: black;
   outline-offset: 3px;
@@ -91,6 +91,7 @@ nav {
   top: 3vh;
   right: 5%;
   cursor: pointer;
+  z-index: 100;
 }
 
 .line {
@@ -99,6 +100,88 @@ nav {
   background: black;
   border-radius: 5px;
   margin: 4px;
+}
+
+.hamburger-menu {
+  z-index: 2;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background: rgba(32, 30, 30, 0.9);
+}
+
+.hamburger-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.showMenu {
+  transition: all 0.5 ease-in-out;
+  right: 0;
+}
+
+.hamburger-menu-list {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: 0.8rem;
+}
+
+.contact-popup, .contact-section {
+  width: 100%;
+  padding-bottom: 60px;
+  z-index: 5;
+}
+
+.contact-popup {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  background: rgba(32, 30, 30, 0.9);
+  color: white;
+}
+
+.contact-popup-close {
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.contact-hidden {
+  display: none;
+}
+
+.contact-info {
+  display: block;
+  width: 80%;
+  text-align: center;
+  margin: 5px auto 20px auto;
+}
+
+.contact-info i {
+  color: #cd7c11;
+}
+
+.contact-title, .mid-title {
+  border-bottom: 1px solid #cd7c11;
+  width: 50%;
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 50px auto 50px auto;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 860px) {
@@ -111,7 +194,7 @@ nav {
   #nav-logo {
     max-width: 120px;
   }
-  .nav-btn {
+  .nav-contact-btn {
     display: inline-block;
   }
 }
@@ -216,44 +299,6 @@ main {
 .item:hover {
   border-bottom: 2px solid #cd7c11;
   color: #cd7c11;
-}
-
-.contact-popup, .contact-section {
-  width: 100%;
-  padding-bottom: 60px;
-  z-index: 5;
-}
-
-.contact-popup {
-  position: absolute;
-  top: 10vh;
-  left: 0;
-  background: rgba(32, 30, 30, 0.9);
-  color: white;
-}
-
-.contact-hidden {
-  display: none;
-}
-
-.contact-info {
-  display: block;
-  width: 80%;
-  text-align: center;
-  margin: 5px auto 20px auto;
-}
-
-.contact-info i {
-  color: #cd7c11;
-}
-
-.contact-title, .mid-title {
-  border-bottom: 1px solid #cd7c11;
-  width: 50%;
-  text-align: center;
-  font-size: 1.1rem;
-  margin: 50px auto 50px auto;
-  padding-bottom: 10px;
 }
 
 .nibe-banner {

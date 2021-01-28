@@ -102,6 +102,10 @@ nav {
   margin: 4px;
 }
 
+.line-white {
+  background: white;
+}
+
 .hamburger-menu {
   z-index: 2;
   color: #ffffff;
@@ -134,7 +138,8 @@ nav {
   font-size: 0.8rem;
 }
 
-.contact-popup, .contact-section {
+.contact-popup,
+.contact-section {
   width: 100%;
   padding-bottom: 60px;
   z-index: 5;
@@ -175,7 +180,8 @@ nav {
   color: #cd7c11;
 }
 
-.contact-title, .mid-title {
+.contact-title,
+.mid-title {
   border-bottom: 1px solid #cd7c11;
   width: 50%;
   text-align: center;
@@ -210,7 +216,6 @@ main {
 
 .about-title {
   font-size: 1.5625rem;
-  color: white;
   text-transform: uppercase;
   text-align: left;
   position: absolute;
@@ -260,10 +265,10 @@ main {
 
 .hero-bg {
   object-fit: cover;
-  object-position: right 80%;
   width: 100vw;
   height: 100vh;
   z-index: -1;
+  object-position: right 80%;
 }
 
 .energy-img {

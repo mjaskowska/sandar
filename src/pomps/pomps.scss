@@ -36,9 +36,6 @@
         list-style: none;
     }
 }
-.polaroid2, .polaroid3, .polaroid4, .polaroid5, .polaroid6, .polaroid7, .polaroid8 {
-    display: none;
-}
 
 
 .card-container {
@@ -79,10 +76,31 @@
   }
   .card-back {
     transform: rotateY(180deg);
-    background: white;
+    background: $primary-orange;
     position: absolute;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+  }
+  .card-overflow .card-description {
+    display: block;
+    // color: black;
+    // background: white;
+    width: 100%;
+    font-size: 0.6rem;
+     ol {
+       width: 95%;
+       margin: 0 auto;
+       display: block;
+     }
+  }
+  .card-overflow img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
   }
   .card-title {
       height: 100%;
@@ -95,17 +113,26 @@
     align-items: center;
   }
   .card-description {
+    color: white;
+    width: 98%;
+    margin: 0 auto;
       font-size: 0.75rem;
       padding: 5px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: WHITE;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
+   
   }
+  .card-description ul {
+    width: 90%;
+  }
+  .card-mid-title {
+    margin: 10px auto;
+    font-weight: bold;
+  }
+ 
+ 
   .card-img {
       width: 100%;
   }

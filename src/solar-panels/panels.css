@@ -284,6 +284,71 @@ main {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, transparent 90%);
 }
 
+.items {
+  width: 95%;
+  margin: 70px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+  justify-content: center;
+  align-content: center;
+  grid-gap: 15px 5px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
+}
+
+.items-1 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 270px));
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.item:hover {
+  border-bottom: 2px solid #cd7c11;
+  color: #cd7c11;
+}
+
+.item .scheme {
+  width: 100%;
+}
+
+.item .scheme:hover {
+  transform: scale(1.7);
+  position: absolute;
+  bottom: 10vh;
+  z-index: 5;
+  border: 1px solid black;
+}
+
+.item img {
+  width: 50%;
+}
+
+.item ul {
+  width: 80%;
+  text-align: left;
+}
+
+.card-title {
+  height: 100%;
+  color: #ff9900;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 300px) {
   .panels-description {
     font-size: calc(0.75rem + 1vw + -3px);

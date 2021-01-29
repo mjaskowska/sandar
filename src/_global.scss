@@ -265,3 +265,18 @@ main {
   width: 100%;
   overflow: hidden;
 }
+
+@media (min-width: 860px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-list {
+    display: flex;
+  }
+  #nav-logo {
+    max-width: 120px;
+  }
+  .nav-contact-btn {
+    display: inline-block;
+  }
+}

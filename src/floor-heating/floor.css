@@ -201,6 +201,11 @@ nav {
   padding-bottom: 10px;
 }
 
+main {
+  width: 100%;
+  overflow: hidden;
+}
+
 @media (min-width: 860px) {
   .hamburger {
     display: none;
@@ -216,9 +221,83 @@ nav {
   }
 }
 
-main {
-  width: 100%;
-  overflow: hidden;
+@media (min-width: 300px) {
+  .about-description {
+    font-size: calc(0.75rem + 1vw + -3px);
+  }
+  .pomps-description {
+    font-size: calc(0.75rem + 1vw + -3px);
+  }
+  .floor-description {
+    font-size: calc(0.75rem + 1vw + -3px);
+  }
+  .recuperation-description {
+    font-size: calc(0.75rem + 1vw + -3px);
+  }
+  .panels-description {
+    font-size: calc(0.75rem + 1vw + -3px);
+  }
+}
+
+@media (min-width: 600px) {
+  .about-description {
+    width: 60%;
+  }
+  .pomps-description {
+    width: 60%;
+  }
+  .floor-description {
+    width: 60%;
+  }
+  .recuperation-description {
+    width: 60%;
+  }
+  .panels-description {
+    width: 60%;
+  }
+}
+
+@media (min-width: 850px) {
+  .about-title {
+    top: 40%;
+  }
+  .about-description {
+    top: 50%;
+    width: 50%;
+    font-size: calc(0.75rem + 4px);
+  }
+  .pomps-title {
+    top: 30%;
+  }
+  .pomps-description {
+    top: 40%;
+    width: 50%;
+    font-size: calc(0.75rem + 4px);
+  }
+  .floor-title {
+    top: 30%;
+  }
+  .floor-description {
+    top: 40%;
+    width: 50%;
+    font-size: calc(0.75rem + 4px);
+  }
+  .recuperation-title {
+    top: 30%;
+  }
+  .recuperation-description {
+    top: 40%;
+    width: 50%;
+    font-size: calc(0.75rem + 4px);
+  }
+  .panels-title {
+    top: 30%;
+  }
+  .panels-description {
+    top: 40%;
+    width: 50%;
+    font-size: calc(0.75rem + 4px);
+  }
 }
 
 .hero {
@@ -284,26 +363,106 @@ main {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, transparent 90%);
 }
 
-@media (min-width: 300px) {
-  .floor-description {
-    font-size: calc(0.75rem + 1vw + -3px);
-  }
+.items {
+  width: 95%;
+  margin: 70px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+  justify-content: center;
+  align-content: center;
+  grid-gap: 15px 5px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
 }
 
-@media (min-width: 600px) {
-  .floor-description {
-    width: 60%;
-  }
+.item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-@media (min-width: 850px) {
-  .floor-title {
-    top: 30%;
-  }
-  .floor-description {
-    top: 40%;
-    width: 50%;
-    font-size: calc(0.75rem + 4px);
-  }
+.item:hover {
+  border-bottom: 2px solid #cd7c11;
+  color: #cd7c11;
+}
+
+.item ul {
+  list-style: none;
+}
+
+.card-container {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+  grid-template-rows: 350px;
+  grid-auto-rows: 350px;
+  margin: 0 auto 100px auto;
+  grid-gap: 10px 15px;
+  justify-content: center;
+}
+
+.info-card {
+  background: white;
+  border: 1px solid orange;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.8s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.info-card:hover .card-inner, .info-card:focus .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: #cd7c11;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  height: 100%;
+  color: #ff9900;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-description {
+  color: white;
+  width: 98%;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 /*# sourceMappingURL=floor.css.map */

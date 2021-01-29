@@ -1,367 +1,92 @@
+@media (min-width: 860px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-list {
+    display: flex;
+  }
+  #nav-logo {
+    max-width: 120px;
+  }
+  .nav-contact-btn {
+    display: inline-block;
+  }
+}
 
-// @media screen and (min-width: 372px){
-//     header{
-//         height: 140px;
-//     }
-//     main{
-//         .contact-section{
-//             top: 140px;
-//         }
-//     }
-// }
-// @media screen and (min-width: 395px){
-//     header{
-//         height: 120px;
-//     }
-//     main{
-//         .contact-section{
-//             top: 120px;
-//         }
-//         .kolektory{
-//             .top-page{
-//                 .img-part{
-//                     p {
-//                         top: 40%;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-// @media screen and (min-width: 522px){
-//     header{
-//         height: 90px;
-//     }
-//     main{
-//         .contact-section{
-//             top: 90px;
-//         }
-//         .pompy{
-//             .item-container{
-//                 grid-template-columns: 1fr 1fr 1fr;
-//             }
-//         }
-//         .rekuperacja{
-//             .top-page{
-//                 .item-container{
-//                     display: grid;
-//                     grid-template-columns: 1fr 1fr;
-//                     grid-gap: 0;
-//                     grid-template-areas: "zal1 zal2"
-//                                         "zal3 zal4";
-//                     p{
-//                      font-size: 0.8rem;
-//                      }   
-//                 }
-//             }
-//             .more-info{
-//                 .straty{
-//                     .item-container{
-//                         grid-template-columns: 1fr 1fr 1fr 1fr;
-//                         grid-template-rows: 1fr 1fr;
-//                     }
-//                 }
-//             }
-//         } 
-//     }
-// }
+@media (min-width: 300px) {
+  .about-description {
+    font-size: calc(0.75rem + 1vw + -3px);
+  }
+  .pomps-description {
+    font-size: calc(0.75rem + 1vw + -3px);
+  }
+  .floor-description {
+    font-size: calc(0.75rem + 1vw + -3px);
+  }
+  .recuperation-description {
+    font-size: calc(0.75rem + 1vw + -3px);
+  }
+  .panels-description {
+    font-size: calc(0.75rem + 1vw + -3px);
+  }
+}
+@media (min-width: 600px) {
+  .about-description {
+    width: 60%;
+  }
+  .pomps-description {
+    width: 60%;
+  }
+  .floor-description {
+    width: 60%;
+  }
+  .recuperation-description {
+    width: 60%;
+  }
+  .panels-description {
+    width: 60%;
+  }
+}
 
-//  @media screen and (min-width: 576px){
-//    main{
-//        .pompy{
-//            .top-page{
-//                .item-container{
-//                    grid-template-columns: 1fr 1fr 1fr;
-//                }
-//            }
-//        }
-//         .kolektory{
-//             .top-page{
-//                 .img-part{
-//                     p {
-//                         top: 40%;
-//                     }
-//                 }
-//             }
-//         }
-//     .rekuperacja{
-//         .top-page{
-//             .img-part{
-//                 p {
-//                     width: 50%;
-//                 }
-//             }
-//         }
-//     }
-//     .ogrzewanie{
-//         .top-page{
-//             .item-container{
-//                 grid-template-rows: 1fr 1fr;
-//                 grid-template-columns: 1fr 1fr 1fr;
-//              }
-//         }
-//         .more-info{
-//             display: grid;
-//             grid-template-columns: 1fr 1fr;
-//             grid-template-rows: 1fr 1fr;
-//             grid-gap: 15px;
-//             width: 95%;
-//             margin: 0 auto;
-//             .podloga, .polaroid, .tradycyjne, .zrodlo-ciepla{
-//                 margin: 0;
-//                justify-content: flex-start;
-//             }
-//         }
-//     }
-//    }
-//  }
-//  @media screen and (min-width: 612px){
-//      header{
-//          height: 80px;
-//      }
-//      main{
-//         .contact-section{
-//             top: 80px;
-//         }
-//         .pompy{
-//             .img-part{
-//                 p {
-//                     width: 50%;
-//                 }
-//             }
-//             .more-info{
-//                 .item-container{
-//                     display: grid;
-//                     grid-template-columns: 1fr 1fr;
-//                     grid-gap:0;
-//                     grid-template-areas: "pol1 pol3"
-//                                         "pol2 pol3"
-//                                         "pol2 pol3"
-//                                         "pol4 pol3"
-//                                         "pol5 pol6"
-//                                         "pol5 pol7"
-//                                         "pol5 pol8";
-                   
-//                 }
-//             }
-//         }
-//         .kolektory{
-//             .top-page{
-//                 .img-part{
-//                     p {
-//                         width: 60%;
-//                         top: 40%;
-//                     }
-//                 }
-//             }
-            
-//             .more-info{
-//                 .item-container{
-//                     display: grid;
-//                     grid-template-columns: 2fr 1fr;
-//                     grid-template-areas: "pol1 pol2"
-//                                             "pol1 pol3";
-//                 }
-//                 .item-container1{
-//                     display: grid;
-//                     grid-template-columns: 1fr 1fr;
-//                     grid-template-areas: "pol4 pol5"
-//                                         "pol6 .";
-                    
-//                 }
-//             }
-            
-//         }
-//         .ogrzewanie{
-//             .top-page{
-//                 .img-part{
-//                     .text{
-//                         width: 70%;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-//  }
-
-//  @media screen and (min-width: 768px){
-        
-//     main{
-     
-//         .rekuperacja{
-//             .top-page{
-//                 .item-container{
-//                     display: grid;
-//                     grid-template-columns: 1fr 1fr 1fr 1fr;
-//                     grid-gap: 0;
-//                     grid-template-areas: "zal1 zal2 zal3 zal4";
-//                     p{
-//                         font-size: 0.8rem;
-//                     }            
-//                 }
-//             }
-//             .more-info{
-//                 display: grid;
-//                 grid-gap: 5px;
-//                 grid-template-columns: 1fr 1fr;
-//                 grid-template-areas: "straty straty"
-//                                     "dlaczego jak";
-//                 .straty{
-                    
-//                     .item-container{
-//                         grid-template-columns: repeat(8, 1fr);
-//                         grid-template-rows: 1fr;
-//                     }
-//                 }
-//                 .jak-dziala{
-//                     justify-content: flex-start;
-//                 }
-//             }
-//         }
-//     }
-//  }
-
- 
-//  @media screen and (min-width: 992px) {
-     
-//     header{ 
-//         nav{
-//          .nav-list{
-//              li{
-//                  font-size: 1.2rem;
-//              }
-//          }
-//      }
-//     }
-//    }
-//     main{
-//         .pompy {
-//             .top-page{
-//             display: grid;
-//             grid-template-columns: 4fr 2fr;
-//             grid-template-rows: 1fr;
-//             align-items: stretch;
-
-//                 .img-part{
-//                     p {
-//                         width: 60%;
-//                         font-size: 1rem;
-//                     }
-//                 }
-//                 .item-container{
-//                     grid-template-columns: 1fr 1fr 1fr;
-//                     grid-template-rows: 1fr 1fr 1fr;
-//                     align-items: stretch;
-//                     .item{
-//                         min-height: 150px;
-//                         max-height: calc(87vh /3);
-//                         grid-gap:0;
-//                         padding: 1px;
-//                     }
-//                 }
-//             }
-//             .more-info{
-//                 .item-container{
-//                     grid-template-columns: 1fr 1fr 1fr 1fr;
-//                     grid-template-areas: "pol1 pol2 pol4 pol3"
-//                                         "pol1 pol2 pol4 pol3"
-//                                         "pol5 pol5 pol6 pol3"
-//                                         "pol5 pol5 pol7 pol8";
-//                 }
-//             }
-//         }
-//         .kolektory{
-//             .top-page{
-//                 .img-part{
-//                     p {
-//                         width: 40%;
-//                         top: 40%;
-//                         font-size: 1rem;
-//                     }
-//                 }
-//             }
-//             .more-info{
-//                 margin-top: 40px;
-//                 .item-container1{
-//                     display: grid;
-//                     grid-template-columns: 1fr 1fr 1fr;
-//                     grid-template-areas: "pol4 pol5 pol6";
-                    
-//                 }
-//                 h4{
-//                     margin: 150px auto 50px auto;
-//                 }
-//             }
-//         }
-//         .rekuperacja{
-//             .top-page{
-//                 display: grid;
-//                 grid-template-columns: 2fr 1fr;
-//                 grid-template-rows: 1fr;
-//                 align-items: stretch;
-
-//                 .img-part{
-//                     p {
-//                         width: 65%;
-//                         font-size: 1rem;
-//                     }
-//                 }
-//                 .item-container{
-//                     display: grid;
-//                     grid-template-columns: 1fr 1fr;
-//                     grid-template-areas: "zal1 zal2"
-//                                         "zal3 zal4";
-//                     align-items: stretch;
-//                     grid-gap: 0;
-//                     .item{
-                        
-//                         height: calc((85vh /2)-2px);
-//                     }
-//                 }
-//             }
-//             .more-info{
-//                 max-width: 95%;
-//                 margin: 50px auto 20px auto;
-//                 .jak-dziala, .dlaczego-wybrac{
-//                     width: 95%;
-//                     margin-top: 30px;
-//                 }
-//             }
-//         }
-//         .ogrzewanie{
-//             .top-page{
-//                 display: grid;
-//                 grid-template-columns: 2fr 1fr;
-//                 grid-template-rows: 1fr;
-//                 align-items: stretch;
-
-//                 .img-part{
-//                     .text{
-//                         width: 70%;
-//                         p{
-//                             font-size: 1rem;
-//                         }
-//                     }
-//                 }
-//                 .item-container{
-//                     grid-template-columns: 1fr 1fr;
-//                     grid-template-rows: 1fr 1fr 1fr;
-//                 }
-//             }
-//             .more-info{
-//                 display: grid;
-//                 grid-template-columns: 1fr 1fr 1fr 1fr;
-//                 grid-template-rows: 1fr;
-//                 grid-gap: 15px;
-//                 width: 95%;
-//                 margin: 20px auto;
-//                 .podloga, .polaroid, .tradycyjne, .zrodlo-ciepla{
-//                     margin: 0;
-                   
-//                    justify-content: flex-start;
-//                 }
-//             }
-//         }
-        
-//     }
-
+@media (min-width: 850px) {
+  .about-title {
+    top: 40%;
+  }
+  .about-description {
+    top: 50%;
+    width: 50%;
+    font-size: calc(0.75rem + 4px);
+  }
+  .pomps-title {
+    top: 30%;
+  }
+  .pomps-description {
+    top: 40%;
+    width: 50%;
+    font-size: calc(0.75rem + 4px);
+  }
+  .floor-title {
+    top: 30%;
+  }
+  .floor-description {
+    top: 40%;
+    width: 50%;
+    font-size: calc(0.75rem + 4px);
+  }
+  .recuperation-title {
+    top: 30%;
+  }
+  .recuperation-description {
+    top: 40%;
+    width: 50%;
+    font-size: calc(0.75rem + 4px);
+  }
+  .panels-title {
+    top: 30%;
+  }
+  .panels-description {
+    top: 40%;
+    width: 50%;
+    font-size: calc(0.75rem + 4px);
+  }
+}

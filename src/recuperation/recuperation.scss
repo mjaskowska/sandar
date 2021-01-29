@@ -1,176 +1,98 @@
-@import '../global';
-@import '../media-queries';
-
-
-
+@import "../global";
+@import "../media-queries";
 
 .hero {
-    position: relative;
-    width: 100%;
-  }
-  .recuperation-title {
-      @include title();
-  }
-  .recuperation-description {
-      @include hero-description();
-  }
-  
-  .hero-bg {
-      @include hero-bg-img();
-    object-position: left 60%;
-  }
+  position: relative;
+  width: 100%;
+}
+.recuperation-title {
+  @include title();
+}
+.recuperation-description {
+  @include hero-description();
+}
 
-  @media (min-width: 300px) {
-    .recuperation-description {
-      font-size: calc(0.75rem + 1vw + -3px);
-    }
-  }
-  @media (min-width: 600px) {
-    .recuperation-description {
-      width: 60%;
-    }
-  }
-  @media (min-width: 850px) {
-    .recuperation-title {
-      top: 30%;
-    }
-    .recuperation-description {
-      top: 40%;
-      width: 50%;
-      font-size: calc(0.75rem + 4px);
-    }
-  }
+.hero-bg {
+  @include hero-bg-img();
+  object-position: left 60%;
+}
 
+.items {
+  @include items();
+  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+}
+.item {
+  @include item();
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
+.card-container {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-template-rows: 500px;
+  grid-auto-rows: 500px;
+  margin: 0 auto 100px auto;
+  grid-gap: 10px 15px;
+  justify-content: center;
+}
 
+.info-card {
+  background: white;
+  border: 1px solid orange;
+  cursor: pointer;
+  position: relative;
+}
+.card-inner {
+  position: absolute;
 
+  width: 100%;
+  height: 100%;
+  transition: all 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  // perspective: 1000px;
+}
+.info-card:hover .card-inner,
+.info-card:focus .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+  // position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.card-back {
+  transform: rotateY(180deg);
+  background: $primary-orange;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-
-
-
-
-
-
-// .rekuperacja {
-//     .top-page{
-//         .img-part{
-//             position: relative;
-
-//             .background-img{
-
-//                 &::after{
-//                     content: '';
-//                     position: absolute;
-//                     left: 0;
-//                     top: 0;
-//                     width: 100%;
-//                     height: 85vh;
-//                     display: inline-block;
-//                     background: linear-gradient(to right, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.3) 90%);
-//                 }
-//                 img{
-//                 object-fit: cover;
-//                 object-position: 40% 20%;
-//                 width: 100%;
-//                 position: relative;
-//                 max-height: 85vh;
-//                 min-height: 85vh;
-//                 z-index: -1;
-                
-//                 }
-//             }
-//             h2{
-//                 @include title();
-//                 position: absolute;
-//                 top: 10%;
-//                 left: 10%;
-
-//             }
-//             p{
-//                 position: absolute;
-//                 top: 30%;
-//                 left: 10%;
-//                 color: white;
-//                 text-transform: uppercase;
-//                 font-size: 0.8rem;
-//                 width: 70%;
-//                 line-height: 1.3;
-//                 max-height: 50vh;
-//             }
-//         }
-//         .item-container{
-//             .item{
-//                 color: white;
-//                 background: black;
-//                 @include item-in-container();
-//                 p{
-//                     margin: 0 auto;
-//                     text-align: center;
-                   
-//                 }
-//                 padding-bottom: 20px;
-//             }
-//             .zaleta1{
-//                 background: #211814;
-//                 grid-area: zal1;
-                
-//             }
-//             .zaleta2{
-//                 background: #0F0705;
-//                 grid-area: zal2;
-//             }
-//             .zaleta3{
-//                 background: #BB7000;
-//                 grid-area:zal3;
-                
-//             }
-//             .zaleta4{
-//                 background: #29160B;
-//                 grid-area: zal4;
-//             }
-//         }
-//     }
-//     .more-info{
-//         .straty{
-//             grid-area: straty;
-//             margin: 20px auto;
-//             h4{
-//                 font-size: 1.2rem;
-//                 font-weight: 600;
-//                 text-align: center;
-//                 margin-bottom: 15px;
-//             }
-//             .item-container{
-//                 display: grid;
-//                 grid-template-columns: 1fr 1fr;
-//                 grid-gap: 2px;
-
-//                 .item {
-//                     @include item-in-container();
-//                     color: black;
-//                     font-size: 0.9rem;
-//                     text-align: center;
-//                     border: 1px solid #29160B;
-//                 }
-//             }
-//         }
-//         .dlaczego-wybrac, .jak-dziala{
-//             @include item-in-container();
-//             h4{
-//                 font-size: 1.2rem;
-//                 font-weight: 600;
-//                 text-align: center;
-//                 margin-bottom: 15px;
-//             }
-                      
-//         }
-//         .dlaczego-wybrac{
-            
-//             grid-area: dlaczego;
-//         }
-//         .jak-dziala{
-            
-//             grid-area: jak;
-//         }
-//     }
-// }
+.card-title {
+  height: 100%;
+  color: #ff9900;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-description {
+  color: white;
+  width: 98%;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

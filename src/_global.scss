@@ -157,13 +157,13 @@ nav {
   }
 }
 .btn-white {
-      border: 1px solid white;
-      outline: 1px solid white;
-      outline-offset: -2px;
-      &:hover {
-        color:white;
-        outline-offset: 3px;
-      }
+  border: 1px solid white;
+  outline: 1px solid white;
+  outline-offset: -2px;
+  &:hover {
+    color: white;
+    outline-offset: 3px;
+  }
 }
 
 .hamburger {
@@ -259,21 +259,6 @@ nav {
   font-size: 1.1rem;
   margin: 50px auto 50px auto;
   padding-bottom: 10px;
-}
-
-@media (min-width: 860px) {
-  .hamburger {
-    display: none;
-  }
-  .nav-list {
-    display: flex;
-  }
-  #nav-logo {
-    max-width: 120px;
-  }
-  .nav-contact-btn {
-    display: inline-block;
-  }
 }
 
 main {

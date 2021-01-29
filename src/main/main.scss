@@ -9,7 +9,7 @@
 }
 
 .about-description {
- @include hero-description();
+  @include hero-description();
 }
 
 .bg-overlay {
@@ -44,12 +44,11 @@
   min-height: 50px;
 }
 
-
 .items {
   @include items();
 }
 .item {
-@include item();
+  @include item();
 }
 
 .nibe-banner {
@@ -65,26 +64,5 @@
     aspect-ratio: 4 / 1;
     display: block;
     margin: 0 auto;
-  }
-}
-
-@media (min-width: 300px) {
-  .about-description {
-    font-size: calc(0.75rem + 1vw + -3px);
-  }
-}
-@media (min-width: 600px) {
-  .about-description {
-    width: 60%;
-  }
-}
-@media (min-width: 850px) {
-  .about-title {
-    top: 40%;
-  }
-  .about-description {
-    top: 50%;
-    width: 50%;
-    font-size: calc(0.75rem + 4px);
   }
 }

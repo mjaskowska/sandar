@@ -86,6 +86,17 @@ nav {
   outline-offset: 3px;
 }
 
+.btn-white {
+  border: 1px solid white;
+  outline: 1px solid white;
+  outline-offset: -2px;
+}
+
+.btn-white:hover {
+  color: white;
+  outline-offset: 3px;
+}
+
 .hamburger {
   position: absolute;
   top: 3vh;

@@ -252,10 +252,9 @@ main {
   top: 35%;
   left: 10%;
   color: white;
-  text-transform: uppercase;
   font-size: 0.75rem;
   width: 70%;
-  line-height: 1.3;
+  line-height: 1.6;
   max-height: 50vh;
 }
 
@@ -293,6 +292,7 @@ main {
 }
 
 .items {
+  max-width: 1200px;
   width: 95%;
   margin: 70px auto;
   display: grid;

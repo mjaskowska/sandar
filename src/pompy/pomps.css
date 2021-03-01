@@ -10,6 +10,11 @@ body {
   overflow-x: hidden;
 }
 
+.item-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
 nav {
   position: absolute;
   top: 0;
@@ -267,6 +272,7 @@ main {
 }
 
 .items {
+  border: 1px solid red;
   max-width: 1200px;
   width: 95%;
   margin: 70px auto;
@@ -274,7 +280,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
   justify-content: center;
   align-content: center;
-  grid-gap: 15px 5px;
+  grid-gap: 20px 10px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
 }
 
@@ -296,6 +302,10 @@ main {
 
 .item ul {
   list-style: none;
+}
+
+.item li {
+  margin-bottom: 5px;
 }
 
 .card-container {

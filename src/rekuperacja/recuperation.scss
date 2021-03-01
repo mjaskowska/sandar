@@ -29,9 +29,12 @@
   @include item();
   flex-direction: column;
   justify-content: flex-start;
-  h4 {
-    margin-bottom: 10px;
+  border: 1px solid blue;
+  p{
+    margin-bottom: 5px;
+    text-align: left
   }
+ 
 }
 
 .card-container {

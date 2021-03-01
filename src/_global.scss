@@ -55,6 +55,21 @@ body {
   height: 100vh;
   z-index: -1;
 }
+@mixin items {
+  border: 1px solid red;
+  max-width: 1200px;
+  width: 95%;
+  margin: 70px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+  justify-content: center;
+  align-content: center;
+  grid-gap: 20px 10px;
+}
+.item-title{
+  font-weight: 600;
+  margin-bottom: 5px;
+}
 @mixin item {
   display: flex;
   align-items: center;
@@ -67,16 +82,7 @@ body {
     color: $primary-orange;
   }
 }
-@mixin items {
-  max-width: 1200px;
-  width: 95%;
-  margin: 70px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
-  justify-content: center;
-  align-content: center;
-  grid-gap: 15px 5px;
-}
+
 
 // header
 

@@ -28,6 +28,7 @@
   @include items();
   grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
 }
+
 .item {
   @include item();
   flex-direction: column;
@@ -35,6 +36,9 @@
 
   ul {
     list-style: none;
+  }
+  li {
+    margin-bottom: 5px;
   }
 }
 

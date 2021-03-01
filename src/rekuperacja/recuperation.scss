@@ -4,6 +4,10 @@
   position: relative;
   width: 100%;
 }
+.hero-content{
+  width: 80%;
+  margin: 50px auto;
+}
 .recuperation-title {
   @include title();
 }
@@ -13,7 +17,8 @@
 
 .hero-bg {
   @include hero-bg-img();
-  object-position: left 60%;
+  object-position: left 55%;
+  height: 40vh;
 }
 
 .items {
@@ -23,7 +28,10 @@
 .item {
   @include item();
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  h4 {
+    margin-bottom: 10px;
+  }
 }
 
 .card-container {
@@ -96,23 +104,23 @@
   justify-content: center;
 }
 
-@media (min-width: 300px) {
-  .recuperation-description {
-    font-size: calc(0.75rem + 1vw + -3px);
-  }
-}
-@media (min-width: 600px) {
-  .recuperation-description {
-    width: 60%;
-  }
-}
-@media (min-width: 850px) {
-  .recuperation-title {
-    top: 30%;
-  }
-  .recuperation-description {
-    top: 40%;
-    width: 50%;
-    font-size: calc(0.75rem + 4px);
-  }
-}
+// @media (min-width: 300px) {
+//   .recuperation-description {
+//     font-size: calc(0.75rem + 1vw + -3px);
+//   }
+// }
+// @media (min-width: 600px) {
+//   .recuperation-description {
+//     width: 60%;
+//   }
+// }
+// @media (min-width: 850px) {
+//   .recuperation-title {
+//     top: 30%;
+//   }
+//   .recuperation-description {
+//     top: 40%;
+//     width: 50%;
+//     font-size: calc(0.75rem + 4px);
+//   }
+// }

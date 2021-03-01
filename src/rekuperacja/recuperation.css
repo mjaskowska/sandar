@@ -5,8 +5,7 @@
 }
 
 body {
-  width: 99vw;
-  height: 100vh;
+  width: 100%;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
@@ -226,45 +225,43 @@ main {
   width: 100%;
 }
 
+.hero-content {
+  width: 80%;
+  margin: 50px auto;
+}
+
 .recuperation-title {
-  font-size: 1.5625rem;
-  text-transform: uppercase;
-  text-align: left;
-  position: absolute;
-  color: white;
-  top: 25%;
-  left: 10%;
-}
-
-@media (min-width: 360px) {
-  .recuperation-title {
-    font-size: calc(1.5625rem + 4.167vw + -15px);
-  }
-}
-
-@media (min-width: 600px) {
-  .recuperation-title {
-    font-size: calc(1.5625rem + 10px);
-  }
+  font-size: 1.7rem;
+  border-bottom: 1px solid #cd7c11;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .recuperation-description {
-  position: absolute;
-  top: 35%;
-  left: 10%;
-  color: white;
-  font-size: 0.75rem;
-  width: 70%;
+  max-width: 900px;
+  display: block;
+  margin: 50px auto;
+  color: black;
   line-height: 1.6;
-  max-height: 50vh;
+  text-align: justify;
+}
+
+.recuperation-description p {
+  margin-bottom: 1.2rem;
+}
+
+.recuperation-description p span {
+  font-weight: 600;
 }
 
 .hero-bg {
   object-fit: cover;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: -1;
-  object-position: left 60%;
+  object-position: left 55%;
+  height: 40vh;
 }
 
 .items {
@@ -284,16 +281,19 @@ main {
   align-items: center;
   text-align: center;
   line-height: 1.2rem;
-  font-size: 0.85rem;
   border-bottom: 1px solid grey;
   padding-bottom: 10px;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .item:hover {
   border-bottom: 2px solid #cd7c11;
   color: #cd7c11;
+}
+
+.item h4 {
+  margin-bottom: 10px;
 }
 
 .card-container {
@@ -366,28 +366,5 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-@media (min-width: 300px) {
-  .recuperation-description {
-    font-size: calc(0.75rem + 1vw + -3px);
-  }
-}
-
-@media (min-width: 600px) {
-  .recuperation-description {
-    width: 60%;
-  }
-}
-
-@media (min-width: 850px) {
-  .recuperation-title {
-    top: 30%;
-  }
-  .recuperation-description {
-    top: 40%;
-    width: 50%;
-    font-size: calc(0.75rem + 4px);
-  }
 }
 /*# sourceMappingURL=recuperation.css.map */

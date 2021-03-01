@@ -8,18 +8,24 @@
   @include title();
   top: 20%;
 }
+
+.hero-content{
+  width: 80%;
+  margin: 50px auto;
+}
 .panels-description {
   @include hero-description();
 }
 
 .hero-bg {
   @include hero-bg-img();
-  object-position: center bottom;
+  object-position: center 60%;
+  height: 40vh;
 }
 
 .bg-overlay {
   position: relative;
-  height: 100vh;
+  height: 40vh;
 
   &::after {
     content: "";
@@ -69,32 +75,29 @@
 }
 .card-title {
   height: 100%;
-  color: #ff9900;
-  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: 600;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 10px;
 }
 
-@media (min-width: 300px) {
-  .panels-description {
-    font-size: calc(0.75rem + 1vw + -3px);
-  }
-}
-@media (min-width: 600px) {
-  .panels-description {
-    width: 60%;
-  }
-}
-@media (min-width: 850px) {
-  .panels-title {
-    top: 30%;
-  }
-  .panels-description {
-    top: 40%;
-    width: 50%;
-    font-size: calc(0.75rem + 4px);
-  }
-}
+// @media (min-width: 300px) {
+//   .panels-description {
+//     font-size: calc(0.75rem + 1vw + -3px);
+//   }
+// }
+// @media (min-width: 600px) {
+//   .panels-description {
+//     width: 60%;
+//   }
+// }
+// @media (min-width: 850px) {
+//   .panels-title {
+//     top: 30%;
+//   }
+//   .panels-description {
+//     top: 40%;
+//     width: 50%;
+//     font-size: calc(0.75rem + 4px);
+//   }
+// }

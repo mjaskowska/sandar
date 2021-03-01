@@ -4,6 +4,10 @@
   position: relative;
   width: 100%;
 }
+.hero-content {
+  width: 80%;
+  margin: 50px auto;
+}
 .floor-title {
   @include title();
   top: 20%;
@@ -14,11 +18,12 @@
 
 .hero-bg {
   @include hero-bg-img();
-  object-position: right 60%;
+  object-position: right 80%;
+  height: 40vh;
 }
 .bg-overlay {
   position: relative;
-  height: 100vh;
+  height: 40vh;
 
   &::after {
     content: "";
@@ -119,23 +124,23 @@
   justify-content: center;
 }
 
-@media (min-width: 300px) {
-  .floor-description {
-    font-size: calc(0.75rem + 1vw + -3px);
-  }
-}
-@media (min-width: 600px) {
-  .floor-description {
-    width: 60%;
-  }
-}
-@media (min-width: 850px) {
-  .floor-title {
-    top: 30%;
-  }
-  .floor-description {
-    top: 40%;
-    width: 50%;
-    font-size: calc(0.75rem + 4px);
-  }
-}
+// @media (min-width: 300px) {
+//   .floor-description {
+//     font-size: calc(0.75rem + 1vw + -3px);
+//   }
+// }
+// @media (min-width: 600px) {
+//   .floor-description {
+//     width: 60%;
+//   }
+// }
+// @media (min-width: 850px) {
+//   .floor-title {
+//     top: 30%;
+//   }
+//   .floor-description {
+//     top: 40%;
+//     width: 50%;
+//     font-size: calc(0.75rem + 4px);
+//   }
+// }

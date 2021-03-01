@@ -5,8 +5,7 @@
 }
 
 body {
-  width: 99vw;
-  height: 100vh;
+  width: 100%;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
@@ -225,42 +224,39 @@ main {
   position: relative;
 }
 
-.about-title {
-  font-size: 1.5625rem;
-  text-transform: uppercase;
-  text-align: left;
-  position: absolute;
-  color: white;
-  top: 25%;
-  left: 10%;
+.hero-content {
+  width: 80%;
+  margin: 50px auto;
 }
 
-@media (min-width: 360px) {
-  .about-title {
-    font-size: calc(1.5625rem + 4.167vw + -15px);
-  }
+.hero-content .about-title {
+  font-size: 1.7rem;
+  border-bottom: 1px solid #cd7c11;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-@media (min-width: 600px) {
-  .about-title {
-    font-size: calc(1.5625rem + 10px);
-  }
-}
-
-.about-description {
-  position: absolute;
-  top: 35%;
-  left: 10%;
-  color: white;
-  font-size: 0.75rem;
-  width: 70%;
+.hero-content .about-description {
+  max-width: 900px;
+  display: block;
+  margin: 50px auto;
+  color: black;
   line-height: 1.6;
-  max-height: 50vh;
+  text-align: justify;
+}
+
+.hero-content .about-description p {
+  margin-bottom: 1.2rem;
+}
+
+.hero-content .about-description p span {
+  font-weight: 600;
 }
 
 .bg-overlay {
   position: relative;
-  height: 100vh;
+  height: 60vh;
 }
 
 .bg-overlay::after {
@@ -275,18 +271,19 @@ main {
 
 .hero-bg {
   object-fit: cover;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: -1;
   object-position: right 80%;
+  height: 60vh;
 }
 
 .energy-img {
   position: absolute;
   right: 2%;
-  top: 15%;
+  top: 10%;
   filter: grayscale(80%);
-  max-width: 80%;
+  max-width: 90%;
   max-height: 20vh;
   min-height: 50px;
 }
@@ -307,7 +304,6 @@ main {
   align-items: center;
   text-align: center;
   line-height: 1.2rem;
-  font-size: 0.85rem;
   border-bottom: 1px solid grey;
   padding-bottom: 10px;
 }
@@ -330,28 +326,5 @@ main {
   aspect-ratio: 4 / 1;
   display: block;
   margin: 0 auto;
-}
-
-@media (min-width: 300px) {
-  .about-description {
-    font-size: calc(0.75rem + 1vw + -3px);
-  }
-}
-
-@media (min-width: 600px) {
-  .about-description {
-    width: 60%;
-  }
-}
-
-@media (min-width: 850px) {
-  .about-title {
-    top: 40%;
-  }
-  .about-description {
-    top: 50%;
-    width: 50%;
-    font-size: calc(0.75rem + 4px);
-  }
 }
 /*# sourceMappingURL=main.css.map */

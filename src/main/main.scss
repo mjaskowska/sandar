@@ -6,17 +6,18 @@
 .hero-content {
   width: 80%;
   margin: 50px auto;
-  .about-title {
-    @include title()
-  }
-  .about-description {
-  @include hero-description()
-  }
+ 
+}
+.about-title {
+  @include title()
+}
+.about-description {
+@include hero-description()
 }
 
 .bg-overlay {
   position: relative;
-  height: 60vh;
+  height: 80vh;
 
   &::after {
     content: "";
@@ -35,7 +36,7 @@
 .hero-bg {
   @include hero-bg-img();
   object-position: right 80%;
-  height: 60vh;
+  height: 80vh;
 }
 .energy-img {
   position: absolute;

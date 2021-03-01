@@ -4,22 +4,18 @@
   position: relative;
   width: 100%;
 }
-// .pomps-title {
-//   @include title();
-// }
-// .pomps-description {
-//   @include hero-description();
-// }
+
 .hero-content {
   width: 80%;
   margin: 50px auto;
-  .pomps-title {
+  
+}
+.pomps-title {
   @include title()
   }
   .pomps-description {
     @include hero-description()
   }
-}
 
 .hero-bg {
   @include hero-bg-img();
@@ -143,23 +139,3 @@
   z-index: 5;
 }
 
-// @media (min-width: 300px) {
-//   .pomps-description {
-//     font-size: calc(0.75rem + 1vw + -3px);
-//   }
-// }
-// @media (min-width: 600px) {
-//   .pomps-description {
-//     width: 60%;
-//   }
-// }
-// @media (min-width: 850px) {
-//   .pomps-title {
-//     top: 30%;
-//   }
-//   .pomps-description {
-//     top: 40%;
-//     width: 50%;
-//     font-size: calc(0.75rem + 4px);
-//   }
-// }

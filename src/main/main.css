@@ -119,12 +119,14 @@ nav {
 .hamburger-menu {
   z-index: 2;
   color: #ffffff;
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: -300px;
+  right: 0;
   width: 300px;
   height: 100vh;
   background: rgba(32, 30, 30, 0.9);
+  transition: all 0.5 ease-in-out;
+  display: none;
 }
 
 .hamburger-menu a {
@@ -133,8 +135,7 @@ nav {
 }
 
 .showMenu {
-  transition: all 0.5 ease-in-out;
-  right: 0;
+  display: inline-block;
 }
 
 .hamburger-menu-list {
@@ -229,7 +230,7 @@ main {
   margin: 50px auto;
 }
 
-.hero-content .about-title {
+.about-title {
   font-size: 1.7rem;
   border-bottom: 1px solid #cd7c11;
   width: 50%;
@@ -237,26 +238,26 @@ main {
   text-align: center;
 }
 
-.hero-content .about-description {
+.about-description {
   max-width: 900px;
   display: block;
   margin: 50px auto;
   color: black;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
 }
 
-.hero-content .about-description p {
+.about-description p {
   margin-bottom: 1.2rem;
 }
 
-.hero-content .about-description p span {
+.about-description p span {
   font-weight: 600;
 }
 
 .bg-overlay {
   position: relative;
-  height: 60vh;
+  height: 80vh;
 }
 
 .bg-overlay::after {
@@ -275,7 +276,7 @@ main {
   height: 100vh;
   z-index: -1;
   object-position: right 80%;
-  height: 60vh;
+  height: 80vh;
 }
 
 .energy-img {

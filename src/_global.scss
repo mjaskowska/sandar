@@ -16,7 +16,6 @@ $primary-orange: #cd7c11;
 }
 body {
   width: 100%;
-  // height: 100vh;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
@@ -24,20 +23,6 @@ body {
 // mixins
 
 @mixin title {
-  // font-size: 1.5625rem;
-  // text-transform: uppercase;
-  // text-align: left;
-  // position: absolute;
-  // color: white;
-  // top: 25%;
-  // left: 10%;
-
-  // @media (min-width: 360px) {
-  //   font-size: calc(1.5625rem + 4.167vw + -15px);
-  // }
-  // @media (min-width: 600px) {
-  //   font-size: calc(1.5625rem + 10px);
-  // }
   font-size: 1.7rem;
   border-bottom: 1px solid $primary-orange;
   width: 50%;
@@ -45,26 +30,18 @@ body {
   text-align: center;
 }
 @mixin hero-description {
-  // position: absolute;
-  // top: 35%;
-  // left: 10%;
-  // color: white;
-  // font-size: 0.75rem;
-  // width: 70%;
-  // line-height: 1.6;
-  // max-height: 50vh;
   max-width: 900px;
-    display: block;
-    margin: 50px auto;
-    color: black;
-    line-height: 1.6;
-    text-align: justify;
-    p {
-      margin-bottom: 1.2rem;
-      span {
-        font-weight: 600;
-      }
+  display: block;
+  margin: 50px auto;
+  color: black;
+  line-height: 1.6;
+  text-align: left;
+  p {
+    margin-bottom: 1.2rem;
+    span {
+      font-weight: 600;
     }
+  }
 }
 @mixin mid-title {
   color: $brown5;
@@ -74,7 +51,6 @@ body {
 }
 @mixin hero-bg-img {
   object-fit: cover;
-
   width: 100%;
   height: 100vh;
   z-index: -1;
@@ -181,6 +157,9 @@ nav {
   }
 }
 
+
+// hamburger on mobile 
+
 .hamburger {
   position: absolute;
   top: 3vh;
@@ -198,24 +177,26 @@ nav {
 .line-white {
   background: white;
 }
+
 .hamburger-menu {
   z-index: 2;
   color: #ffffff;
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: -300px;
+  right: 0;
   width: 300px;
   height: 100vh;
   background: $kontakt-background;
+  transition: all 0.5 ease-in-out;
+  display: none;
 
   a {
     text-decoration: none;
     color: inherit;
   }
 }
-.showMenu {
-  transition: all 0.5 ease-in-out;
-  right: 0;
+.showMenu {  
+  display: inline-block;
 }
 .hamburger-menu-list {
   display: flex;

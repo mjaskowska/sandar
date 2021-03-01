@@ -56,7 +56,6 @@ body {
   z-index: -1;
 }
 @mixin items {
-  border: 1px solid red;
   max-width: 1200px;
   width: 95%;
   margin: 70px auto;
@@ -267,6 +266,48 @@ main {
   width: 100%;
   overflow: hidden;
 }
+
+
+
+.card-container {
+  width: 95%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 400px));
+  margin: 0 auto 100px auto;
+  grid-gap: 10px 20px;
+  justify-content: center;
+}
+
+.card-title {
+  color: #ff9900;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 15px auto;
+}
+.card-description {
+  width: 98%;
+  margin: 0 auto;
+  padding: 5px;
+
+  p{
+    margin-bottom: 5px;
+  }
+}
+.card-description ul, .card-description ol {
+  width: 90%;
+  margin-left: auto;
+}
+.card-mid-title {
+  margin: 10px auto;
+  font-weight: bold;
+}
+
+.card-img {
+  width: 100%;
+}
+
 
 @media (min-width: 860px) {
   .hamburger {

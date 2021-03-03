@@ -13,6 +13,7 @@ $primary-orange: #cd7c11;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.7rem;
 }
 body {
   width: 100%;
@@ -27,10 +28,11 @@ body {
   border-bottom: 1px solid $primary-orange;
   width: 50%;
   margin: 0 auto;
+  padding-bottom: 10px;
   text-align: center;
 }
 @mixin hero-description {
-  max-width: 900px;
+  max-width: 950px;
   display: block;
   margin: 50px auto;
   color: black;
@@ -56,8 +58,8 @@ body {
   z-index: -1;
 }
 @mixin items {
-  max-width: 1200px;
-  width: 95%;
+  max-width: 1000px;
+  width: 90%;
   margin: 70px auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
@@ -65,7 +67,7 @@ body {
   align-content: center;
   grid-gap: 20px 10px;
 }
-.item-title{
+.item-title {
   font-weight: 600;
   margin-bottom: 5px;
 }
@@ -81,7 +83,6 @@ body {
     color: $primary-orange;
   }
 }
-
 
 // header
 
@@ -162,8 +163,7 @@ nav {
   }
 }
 
-
-// hamburger on mobile 
+// hamburger on mobile
 
 .hamburger {
   position: absolute;
@@ -200,7 +200,7 @@ nav {
     color: inherit;
   }
 }
-.showMenu {  
+.showMenu {
   display: inline-block;
 }
 .hamburger-menu-list {
@@ -267,13 +267,10 @@ main {
   overflow: hidden;
 }
 
-
-
 .card-container {
-  width: 95%;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 950px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 400px));
   margin: 0 auto 100px auto;
   grid-gap: 10px 20px;
   justify-content: center;
@@ -291,11 +288,12 @@ main {
   margin: 0 auto;
   padding: 5px;
 
-  p{
+  p {
     margin-bottom: 5px;
   }
 }
-.card-description ul, .card-description ol {
+.card-description ul,
+.card-description ol {
   width: 90%;
   margin-left: auto;
 }
@@ -307,7 +305,6 @@ main {
 .card-img {
   width: 100%;
 }
-
 
 @media (min-width: 860px) {
   .hamburger {

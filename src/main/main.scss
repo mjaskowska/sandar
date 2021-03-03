@@ -4,15 +4,15 @@
   position: relative;
 }
 .hero-content {
-  width: 80%;
+  width: 85%;
   margin: 50px auto;
- 
 }
 .about-title {
-  @include title()
+  @include title();
 }
 .about-description {
-@include hero-description()
+  @include hero-description();
+  font-family: "Roboto";
 }
 
 .bg-overlay {

@@ -4,18 +4,22 @@
   position: relative;
   width: 100%;
 }
+p,
+li {
+  font-family: "Roboto";
+  line-height: 1.6rem;
+}
 
 .hero-content {
-  width: 80%;
+  width: 85%;
   margin: 50px auto;
-  
 }
 .pomps-title {
-  @include title()
-  }
-  .pomps-description {
-    @include hero-description();
-  }
+  @include title();
+}
+.pomps-description {
+  @include hero-description();
+}
 
 .hero-bg {
   @include hero-bg-img();
@@ -41,6 +45,12 @@
     margin-bottom: 5px;
   }
 }
-
-
-
+.card-container {
+  grid-template-columns: 1fr;
+  grid-gap: 10px 3%;
+}
+@media (min-width: 650px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
